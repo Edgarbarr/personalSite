@@ -1,0 +1,276 @@
+.logo {
+    height: 100px;
+    width: 100px;
+    transition: all 1s;
+}
+.resumeImage{
+    height:800px;
+
+}
+.nav-bar{
+    background-color: rgba(255, 255, 255, 0.904) !important;
+    flex-flow: column !important;
+    border-style: solid;
+    border-width: 0 0 2px 0;
+    border-color: rgb(236, 182, 46);
+}
+
+
+.fadein{
+    opacity: 0;
+    animation: fadein 2s forwards;
+    -moz-animation: fadein 2s forwards; /* Firefox */
+    -webkit-animation: fadein 2s forwards; /* Safari and Chrome */
+    -o-animation: fadein 2s forwards; /* Opera */
+    animation-delay: 1s;
+}
+@keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-moz-keyframes fadein { /* Firefox */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-webkit-keyframes fadein { /* Safari and Chrome */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-o-keyframes fadein { /* Opera */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+.fadeout{
+    animation: fadeout .5s forwards;
+    -moz-animation: fadeout .5s forwards; /* Firefox */
+    -webkit-animation: fadeout .5s forwards; /* Safari and Chrome */
+    -o-animation: fadeout .5s forwards; /* Opera */
+    animation-delay: .2s;
+}
+@keyframes fadeout {
+    from {
+        opacity:1;
+    }
+    to {
+        opacity:0;
+    }
+}
+@-moz-keyframes fadeout { /* Firefox */
+    from {
+        opacity:1;
+    }
+    to {
+        opacity:0;
+    }
+}
+@-webkit-keyframes fadeout { /* Safari and Chrome */
+    from {
+        opacity:1;
+    }
+    to {
+        opacity:0;
+    }
+}
+@-o-keyframes fadeout { /* Opera */
+    from {
+        opacity:1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+.animation-open{
+    height: 0;
+    animation: animation-open .1s forwards;
+    -moz-animation: animation-open 1s forwards; /* Firefox */
+    -webkit-animation: animation-open 1s forwards; /* Safari and Chrome */
+    -o-animation: animation-open 1s forwards; /* Opera */
+    animation-delay: .2s;
+}
+.animation-close{
+    height: 210;
+    animation: animation-close .1s forwards;
+    -moz-animation: animation-close 1s forwards; /* Firefox */
+    -webkit-animation: animation-close 1s forwards; /* Safari and Chrome */
+    -o-animation: animation-close 1s forwards; /* Opera */
+    animation-delay: .2s;
+    align-items: baseline !important;
+}
+@keyframes animation-close {
+    from {
+        height: 210px;
+    }
+    to {
+        height:100px;
+    }
+}
+@-moz-keyframes animation-close { /* Firefox */
+    from {
+        height: 210px;
+    }
+    to {
+        height:100px;
+    }
+}
+@-webkit-keyframes animation-close { /* Safari and Chrome */
+    from {
+        height: 210px;
+    }
+    to {
+        height:100px;
+    }
+}
+@-o-keyframes animation-close { /* Opera */
+    from {
+        height: 210px;
+    }
+    to {
+        height:100px;
+    }
+}
+@keyframes animation-open {
+    from {
+        height:0;
+    }
+    to {
+        height:210px;
+    }
+}
+
+@-moz-keyframes animation-open { /* Firefox */
+    from {
+        height:0;
+    }
+    to {
+        height:210px;
+    }
+}
+@-webkit-keyframes animation-open { /* Safari and Chrome */
+    from {
+        height:0;
+    }
+    to {
+        height:210px;
+    }
+}
+@-o-keyframes animation-open { /* Opera */
+    from {
+        height:0;
+    }
+    to {
+        height:210px;
+    }
+}
+.backgroundimage{
+    background-color: rgb(30, 30, 30);
+    background-image: url("appbackground.png");
+    background-repeat: no-repeat;
+    opacity: 1;
+}
+#app{
+    /* background-color: rgba(0, 0, 0, 0.849); */
+    height: 100vh;
+}
+.profile-pic{
+    height: 300px;
+    width: 350px;
+    border-radius: 50% 10% 50% 10%;
+}
+.font-white{
+    color: white;
+}
+.vh100{
+    height: 100vh;
+}
+.padding-top{
+    padding-top: 100px;
+}
+.slide-down{
+    height: 0;
+    animation: slide-down 1s forwards;
+    -moz-animation: slide-down 1s forwards; /* Firefox */
+    -webkit-animation: slide-down 1s forwards; /* Safari and Chrome */
+    -o-animation: slide-down 1s forwards; /* Opera */
+    animation-delay: 1s;
+}
+@keyframes slide-down {
+    from {
+        top:-10px;
+    }
+    to {
+        top:20px;
+    }
+}
+@-moz-keyframes slide-down { /* Firefox */
+    from {
+        top:-10px;
+    }
+    to {
+        top:20px;
+    }
+}
+@-webkit-keyframes slide-down { /* Safari and Chrome */
+    from {
+        top:-10px;
+    }
+    to {
+        top:20px;
+    }
+}
+@-o-keyframes slide-down { /* Opera */
+    from {
+        top:-10px;
+    }
+    to {
+        top:20px;
+    }
+}
+.margin-auto{
+    margin: auto;
+}
+.navbar-brand:hover{
+    transition: all .2s;
+    color: rgb(236, 182, 46) !important;
+}
+.blk{
+    background-color: rgba(0, 0, 0, 0.849);
+}
+.wte{
+    background-color: rgba(255, 255, 255, 0.884);
+}
+.display_none{
+    display: none;
+}
+.display{
+    display: inline;
+}
+.social_media{
+    height: 100px;
+    width: 100px;
+}
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+    transition: transform .2s; 
+}
+.center:hover {
+    transform: scale(1.5);
+}
