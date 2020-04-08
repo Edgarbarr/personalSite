@@ -4,7 +4,8 @@ module.exports = {
     entry: "./client/src/index.jsx",
     output: {
         path: path.resolve(__dirname, "./client/dist"),
-        filename: "bundle.js"
+        filename: "bundle.js",
+        publicPath: "/"
     },
     
     module: {
@@ -19,6 +20,9 @@ module.exports = {
             }
             
         ]
-    }
+    },
+    devServer: {
+        historyApiFallback: true
+    },
 
 }

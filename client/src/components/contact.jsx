@@ -7,18 +7,25 @@ function Contact(){
     }
     const handleSubmit = (e) => {
         e.preventDefault();
-        const {name, email, subject, message} = formValues;
-        axios.post('/api/form', {
-            name,
-            email,
-            subject,
-            message
-        })
-        .then((res)=>{
-            document.getElementById("form").reset();
-            toggle(res.data);
-            console.log(res.data)
-        })
+        var form = document.getElementById("form");
+        if(form.checkValidity() === false){
+            form.reportValidity();
+
+        } else {
+            const {name, email, subject, message} = formValues;
+            axios.post('/api/form', {
+                name,
+                email,
+                subject,
+                message
+            })
+            .then((res)=>{
+                form.reset();
+                toggle(res.data);
+                console.log(res.data)
+            })
+        }
+        
 
     }
     const toggle = (text) => {
@@ -42,22 +49,22 @@ function Contact(){
                 <div className="form-row">
                     <div className="form-group col-md-6">
                         <label for="name">Name:</label>
-                        <input type="text" className="form-control" id="name" onChange={handleChange}></input>
+                        <input type="text" className="form-control" id="name" onChange={handleChange} required></input>
                     </div>
                     <div className="form-group col-md-6">
                         <label for="email">Email:</label>
-                        <input type="email" className="form-control" id="email" onChange={handleChange}></input>
+                        <input type="email" className="form-control" id="email" onChange={handleChange} required></input>
                     </div>
                 </div>
                 <div className="form-row">
                     <div className="form-group col-md-6">
                         <label for="subject">Subject:</label>
-                        <input type="text" className="form-control" id="subject" onChange={handleChange}></input>
+                        <input type="text" className="form-control" id="subject" onChange={handleChange} required></input>
                     </div>
                 </div>
                 <div className="form-group">
                     <label for="message">Message:</label>
-                    <textarea type="textarea" className="form-control" id="message" onChange={handleChange}></textarea>
+                    <textarea type="textarea" className="form-control" id="message" onChange={handleChange} required></textarea>
                 </div>
                 
                 <button type="submit" className="btn btn-warning" onClick={handleSubmit}>Submit</button>
