@@ -5,7 +5,7 @@ function Resume(){
     return (
         <div className="container-fluid blk">
             <div className="row">
-                <div className="col justify-content-end">
+                <div className="col-12 justify-content-end">
                     <Link to="resume.pdf" target="_blank" download>Download Resume</Link>
                 </div>
                 <div className="">

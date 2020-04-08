@@ -37,9 +37,9 @@ function Contact(){
             <div className="container font-white">
                 <h1>Find me on:</h1>
                 <div className="row">
-                    <div className="col-lg-2 fadein"><a href="https://www.linkedin.com/in/edgarbarrientos5"><img className="social_media" src="https://copyblogger.com/cdn-origin/images/linkedin.png"/></a></div>
-                    <div className="col-lg-2 fadein"><a href="https://www.facebook.com/edgar.barrientos.9"><img className="social_media" src="https://www.freepnglogos.com/uploads/facebook-icons/facebook-icon-transparent-background-3.png"/></a></div>
-                    <div className="col-lg-2 fadein"><a href="https://github.com/Edgarbarr"><img className="social_media" src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"/></a></div>
+                    <div className="col-12 col-md-2 fadein padding-10"><a href="https://www.linkedin.com/in/edgarbarrientos5"><img className="social_media" src="https://copyblogger.com/cdn-origin/images/linkedin.png"/></a></div>
+                    <div className="col-12 col-md-2 fadein padding-10"><a href="https://www.facebook.com/edgar.barrientos.9"><img className="social_media" src="https://stpetersburggroup.com/wp-content/uploads/2018/05/Facebook-Logo-300x300.png"/></a></div>
+                    <div className="col-12 col-md-2 fadein padding-10"><a href="https://github.com/Edgarbarr"><img className="social_media" src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"/></a></div>
 
                 </div>
             </div>

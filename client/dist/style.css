@@ -4,7 +4,7 @@
     transition: all 1s;
 }
 .resumeImage{
-    height:800px;
+    height:100%;
 
 }
 .nav-bar{
@@ -97,7 +97,7 @@
 }
 .animation-open{
     height: 0;
-    animation: animation-open .1s forwards;
+    animation: animation-open 1s forwards;
     -moz-animation: animation-open 1s forwards; /* Firefox */
     -webkit-animation: animation-open 1s forwards; /* Safari and Chrome */
     -o-animation: animation-open 1s forwards; /* Opera */
@@ -105,7 +105,7 @@
 }
 .animation-close{
     height: 210;
-    animation: animation-close .1s forwards;
+    animation: animation-close 1s forwards;
     -moz-animation: animation-close 1s forwards; /* Firefox */
     -webkit-animation: animation-close 1s forwards; /* Safari and Chrome */
     -o-animation: animation-close 1s forwards; /* Opera */
@@ -177,20 +177,36 @@
         height:210px;
     }
 }
+.collapse-open{
+    animation: collapse-open 1s forwards;
+    -moz-animation: collapse-open 1s forwards; /* Firefox */
+    -webkit-animation: collapse-open 1s forwards; /* Safari and Chrome */
+    -o-animation: collapse-open 1s forwards; /* Opera */
+}
+.collapse-close{
+    animation: collapse-open 1s forwards;
+    -moz-animation: collapse-open 1s forwards; /* Firefox */
+    -webkit-animation: collapse-open 1s forwards; /* Safari and Chrome */
+    -o-animation: collapse-open 1s forwards; /* Opera */
+}
+
+
 .backgroundimage{
     background-color: rgb(30, 30, 30);
     background-image: url("appbackground.png");
     background-repeat: no-repeat;
-    opacity: 1;
+    
+    
 }
 #app{
     /* background-color: rgba(0, 0, 0, 0.849); */
-    height: 100vh;
+    
 }
 .profile-pic{
-    height: 300px;
-    width: 350px;
+    height: 250px;
+    width: 300px;
     border-radius: 50% 10% 50% 10%;
+    margin: auto;
 }
 .font-white{
     color: white;
@@ -273,4 +289,23 @@
 }
 .center:hover {
     transform: scale(1.5);
+}
+
+
+@media all and (min-width:0px) and (max-width: 480px) {
+    
+  }
+.margin-none{
+    margin: 0 6px 0 6px !important;
+    text-align: justify;
+}
+.padding-50{
+    padding: 50px 0 50px 0;
+}
+.padding-10{
+    padding: 10px 0 10px 0;
+}
+p{
+    text-align: justify;
+    margin: auto;
 }

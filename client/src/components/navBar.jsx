@@ -3,15 +3,28 @@ import {Link} from "react-router-dom";
 
 
 function NavBar(){
+    var open = false;
+    const collapseHandler = () => {
+        if(open === false){
+            document.getElementById("nav").className += "collapse-open"
+            open = true;
+        } 
+        
+    }
     return (
-        <nav className="navbar navbar-expand-lg navbar-light nav-bar animation-open">
+        <nav id="nav" className="navbar navbar-expand-sm navbar-light nav-bar animation-open">
             <img className="logo fadein" src="/logo.png"/><h4 className="fadein">Full Stack Engineer</h4>
-            <ul className="fadein">
-                <Link to="/"><li className="navbar-brand slide-down">Home</li></Link>
-                <Link to="/projects"><li className="navbar-brand">Projects</li></Link>
-                <Link to="/contact"><li className="navbar-brand">Contact</li></Link>
-                <Link to="/resume"><li className="navbar-brand">Resume</li></Link>
-            </ul>
+            <div className="fadein collapse navbar-collapse" id="collapseDiv">
+                <ul className="navbar-nav mr-auto">
+                    <Link to="/"><li className="navbar-brand margin-none">Home</li></Link>
+                    <Link to="/projects"><li className="navbar-brand margin-none">Projects</li></Link>
+                    <Link to="/contact"><li className="navbar-brand margin-none">Contact</li></Link>
+                    <Link to="/resume"><li className="navbar-brand margin-none">Resume</li></Link>
+                </ul>
+            </div>
+            <button onClick={collapseHandler}className="navbar-toggler fadein" type="button" data-toggle="collapse" data-target="#collapseDiv" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                 <span className="navbar-toggler-icon"></span>
+            </button>
         </nav>
     )
 }
