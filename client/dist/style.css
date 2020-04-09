@@ -278,7 +278,7 @@
     width: 100px;
 }
 .center {
-    width: 70%;
+    width: 65%;
     transition: transform .2s; 
 }
 .center:hover {
@@ -306,3 +306,17 @@ p{
 .center-align{
     text-align: center;
 }
+
+@media only screen and (max-width : 480px) {
+   .desktop-resume {
+   display:none;
+    }
+}  
+.mobile-resume{
+    display:none;
+}
+ @media only screen and (max-width : 480px) {
+    .mobile-resume {
+    display:block;
+     }
+ }  
