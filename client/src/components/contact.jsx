@@ -33,7 +33,7 @@ function Contact(){
         document.getElementById("email_response").textContent = text;
     }
     return (
-        <div className="container-fluid padding-top vh100 blk">
+        <div className="container-fluid padding-top blk">
             <div className="container font-white">
                 <h1>Find me on:</h1>
                 <div className="row">

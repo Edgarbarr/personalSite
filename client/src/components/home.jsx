@@ -2,7 +2,7 @@ import React from "react";
 
 function Home(){
     return (
-        <div className="container-fluid blk vh100">
+        <div className="container-fluid blk vh-100">
             <div className="container">
                 <div className="row padding-top fadein">
                 <div className="col-12 col-md-4"><img className="profile-pic" src="linkedinsmall.jpg"/></div>

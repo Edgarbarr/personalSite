@@ -5,11 +5,11 @@ function Resume(){
     return (
         <div className="container-fluid blk">
             <div className="row">
-                <div className="col-12 justify-content-end">
-                    <Link to="resume.pdf" target="_blank" download>Download Resume</Link>
+                <div className="col-12">
+                    <a href="resume.pdf" download>Download Resume</a>
                 </div>
-                <div className="">
-                    <img className="resumeImage center"src="resume.jpg"/>
+                <div className="col-12 center-align">
+                    <img className="center"src="resume.jpg"/>
                 </div>
                 
             </div>
