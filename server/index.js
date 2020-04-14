@@ -50,3 +50,23 @@ app.post('/api/form', (req, res) => {
 
 app.listen(port, ()=>{console.log(`Now listening on port: ${port}`)});
 app.use(express.static(path.join(__dirname, '../client/dist')));
+app.get('*', function (req, res){
+    var urlpaths = ["/projects", "/resume", "/contact"]
+    if(urlpaths.includes(req.url)){
+        res.sendFile(path.resolve(__dirname, '../client/dist', 'index.html'))
+    } else {
+        res.send(`
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>EdgarBarrientos.com</title>
+        </head>
+        <body>  
+            <div id="app"><h1>Page Not Found: 404</h1></div>  
+        </body>
+        </html>
+        `)
+    }
+  })
