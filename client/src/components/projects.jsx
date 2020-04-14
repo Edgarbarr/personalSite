@@ -1,11 +1,10 @@
 import React from "react";
 
-
 function Projects(){
     return (
         <div className="container-fluid">
             <div className="row blk padding-50">
-                <video className="fadein col-12 col-md-8" width="820"  autoPlay loop muted>
+                <video poster="loading.gif" className="fadein col-12 col-md-8" width="820"  autoPlay loop muted>
                     <source src="Trafalgar.mp4" type="video/mp4"/>
                     Your browser does not support the video tag.
                 </video>
@@ -16,7 +15,7 @@ function Projects(){
                 </div>
             </div>
             <div className="row wte padding-50">
-                <video className="fadein col-12 col-md-8" width="820" autoPlay loop muted>
+                <video poster="loading.gif" className="fadein col-12 col-md-8" width="820" autoPlay loop muted>
                     <source src="systemdesign.mp4" type="video/mp4"/>
                     Your browser does not support the video tag.
                 </video>
@@ -27,7 +26,7 @@ function Projects(){
                 </div>
             </div>
             <div className="row blk padding-50">
-                <video className="fadein col-12 col-md-8" width="820" autoPlay loop muted>
+                <video poster="loading.gif" className="fadein col-12 col-md-8" width="820" autoPlay loop muted>
                     <source src="trivia.mp4" type="video/mp4"/>
                     Your browser does not support the video tag.
                 </video>
