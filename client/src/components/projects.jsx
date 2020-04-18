@@ -33,7 +33,7 @@ function Projects(){
                 <div className="col-sm-4 col-md-4 font-white margin-auto fadein">
                     <h2>Trivia Game</h2>
                     <p> React | PostgreSQL | Express | Javascript | Socket.io</p>
-                    <p>Trivia Game is an app that utilizes websockets get a real time reponse between users in a chat room. The users can participate in a trivia game with a theme of their choice.</p>
+                    <p>Trivia Game is an app that utilizes websockets get a real time response between users in a chat room. The users can participate in a trivia game with a theme of their choice.</p>
                 </div>
             </div>
         </div>
