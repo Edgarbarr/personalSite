@@ -7,15 +7,15 @@ function Resume(){
             <div className="container-fluid blk desktop-resume">
                 <div className="row ">
                     <div className="col-12">
-                        <a href="resume.pdf" download>Download Resume</a>
+                        <a href="embresume.pdf" download>Download Resume</a>
                     </div>
                     <div className="col-12 center-align">
-                        <img className="center"src="resume.jpg"/>
+                        <img className="center"src="embresume.png"/>
                     </div>
                 </div>
             </div>
             <embed className="mobile-resume"
-    src="resume.pdf"
+    src="embresume.pdf"
     type="application/pdf"
     frameBorder="0"
     scrolling="auto"

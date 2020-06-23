@@ -15,7 +15,7 @@ function NavBar(){
         <nav id="nav" className="navbar navbar-expand-sm navbar-light nav-bar animation-open">
             <img className="logo fadein" src="/logo.png"/><h4 className="fadein">Software Engineer</h4>
             <div className="fadein collapse navbar-collapse" id="collapseDiv">
-                <ul className="navbar-nav mr-auto">
+                <ul className="navbar-nav mr-auto justify-align">
                     <Link to="/"><li className="navbar-brand margin-none">Home</li></Link>
                     <Link to="/projects"><li className="navbar-brand margin-none">Projects</li></Link>
                     <Link to="/contact"><li className="navbar-brand margin-none">Contact</li></Link>

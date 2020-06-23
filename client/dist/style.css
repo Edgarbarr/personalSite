@@ -1,3 +1,6 @@
+*, ::after, ::before {
+    box-sizing: border-box;
+}
 .logo {
     height: 100px;
     width: 100px;
@@ -18,11 +21,11 @@
 
 .fadein{
     opacity: 0;
-    animation: fadein 2s forwards;
-    -moz-animation: fadein 2s forwards; /* Firefox */
-    -webkit-animation: fadein 2s forwards; /* Safari and Chrome */
-    -o-animation: fadein 2s forwards; /* Opera */
-    animation-delay: 1s;
+    animation: fadein .7s forwards;
+    -moz-animation: fadein .7s forwards; /* Firefox */
+    -webkit-animation: fadein .7s forwards; /* Safari and Chrome */
+    -o-animation: fadein .7s forwards; /* Opera */
+    animation-delay: .3s;
 }
 @keyframes fadein {
     from {
@@ -97,10 +100,10 @@
 }
 .animation-open{
     height: 0;
-    animation: animation-open 1s forwards;
-    -moz-animation: animation-open 1s forwards; /* Firefox */
-    -webkit-animation: animation-open 1s forwards; /* Safari and Chrome */
-    -o-animation: animation-open 1s forwards; /* Opera */
+    animation: animation-open .3s forwards;
+    -moz-animation: animation-open .3s forwards; /* Firefox */
+    -webkit-animation: animation-open .3s forwards; /* Safari and Chrome */
+    -o-animation: animation-open .3s forwards; /* Opera */
     animation-delay: .2s;
 }
 .animation-close{
@@ -193,7 +196,7 @@
 
 .backgroundimage{
     background-color: rgb(30, 30, 30);
-    background-image: url("appbackground.png");
+    background-size: contain;
     background-repeat: no-repeat;
     
     
@@ -277,6 +280,7 @@
     height: 100px;
     width: 100px;
 }
+
 .center {
     width: 65%;
     transition: transform .2s; 
@@ -320,3 +324,16 @@ p{
     display:block;
      }
  }  
+ .justify-align {
+     justify-content: center;
+     align-items: center;
+ }
+ .margin-10{
+     margin: 5px 10px;
+ }
+ .border-radius{
+     border-radius: 5%;
+ }
+ .social-spacing{
+    justify-content: start;
+ }
