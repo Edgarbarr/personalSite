@@ -195,11 +195,8 @@
 
 
 .backgroundimage{
-    background-color: rgb(30, 30, 30);
-    background-size: contain;
-    background-repeat: no-repeat;
-    
-    
+    background-color: rgb(0, 0, 0);
+
 }
 
 .profile-pic{
@@ -285,9 +282,7 @@
     width: 65%;
     transition: transform .2s; 
 }
-.center:hover {
-    transform: scale(1.1);
-}
+
 
 
 @media all and (min-width:0px) and (max-width: 480px) {
@@ -325,8 +320,11 @@ p{
      }
  }  
  .justify-align {
+     display: flex;
+     flex-direction: column;
      justify-content: center;
      align-items: center;
+     text-align: center;
  }
  .margin-10{
      margin: 5px 10px;

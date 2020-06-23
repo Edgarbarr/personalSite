@@ -37,9 +37,9 @@ function Contact(){
             <div className="container font-white">
                 <h1>Find me on:</h1>
                 <div className="row social-spacing">
-                    <div className=" fadein margin-10"><a href="https://www.linkedin.com/in/edgarbarrientos5"><img className="social_media" src="https://copyblogger.com/cdn-origin/images/linkedin.png"/></a></div>
-                    <div className=" fadein margin-10"><a href="https://www.facebook.com/edgar.barrientos.9"><img className="social_media" src="https://stpetersburggroup.com/wp-content/uploads/2018/05/Facebook-Logo-300x300.png"/></a></div>
-                    <div className=" fadein margin-10"><a href="https://github.com/Edgarbarr"><img className="social_media border-radius" src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"/></a></div>
+                    <div className="margin-10"><a href="https://www.linkedin.com/in/edgarbarrientos5"><img className="social_media" src="https://copyblogger.com/cdn-origin/images/linkedin.png"/></a></div>
+                    <div className="margin-10"><a href="https://www.facebook.com/edgar.barrientos.9"><img className="social_media" src="https://stpetersburggroup.com/wp-content/uploads/2018/05/Facebook-Logo-300x300.png"/></a></div>
+                    <div className="margin-10"><a href="https://github.com/Edgarbarr"><img className="social_media border-radius" src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"/></a></div>
 
                 </div>
             </div>

@@ -34,11 +34,11 @@ function Projects(){
         var {title, tech, description, video} = projectData;
         return (index % 2 === 1) ? 
         <div className="row wte padding-50">
-                 <video className="fadein col-12 col-md-8" width="820"  autoPlay loop muted>
+                 <video className="fadein col-12 col-md-8" width="820"  autoPlay loop muted playsinline>
                      <source src={video} type="video/mp4"/>
                      Your browser does not support the video tag.
                  </video>
-                 <div className="col-sm-8 col-md-4 margin-auto fadein">
+                 <div className="col-sm-8 col-md-4 margin-auto fadein justify-align">
                      <h2>{title}</h2>
                      <p>{tech}</p>
                      <p>{description}</p>
@@ -50,16 +50,17 @@ function Projects(){
                  <img className="fadein col-12 col-md-8" src="hoh.png"/>
 
                  :
-                 <video className="fadein col-12 col-md-8" width="820" autoPlay loop muted>
+                 <video className="fadein col-12 col-md-8" width="820" autoPlay loop muted playsinline>
                      <source src={video} type="video/mp4"/>
                      Your browser does not support the video tag.
                  </video>
                  }
-                 <div className="col-sm-4 col-md-4 font-white margin-auto fadein">
+                 <div className="col-sm-8 col-md-4 font-white margin-auto fadein justify-align">
                      {(title === "Haven Of Happiness") ? 
-                     [<p>An ecommerce app for handmade charms and keychains.</p>,
+                     [<h2>{title}</h2>,
+                     <p>An ecommerce app for handmade charms and keychains.</p>,
                      <p>WORK IN PROGRESS!</p>,
-                     <p className="font-white">VISIT HERE: <a href="ec2-54-176-234-58.us-west-1.compute.amazonaws.com:5000" target="_blank">Haven Of Happiness</a></p>]
+                     <p className="font-white">VISIT HERE: <a href="http://ec2-54-176-234-58.us-west-1.compute.amazonaws.com:5000" target="_blank">Haven Of Happiness</a></p>]
                      :
                      [<h2>{title}</h2>,
                      <p>{tech}</p>,
