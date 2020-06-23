@@ -59,7 +59,7 @@ function Projects(){
                      {(title === "Haven Of Happiness") ? 
                      [<p>An ecommerce app for handmade charms and keychains.</p>,
                      <p>WORK IN PROGRESS!</p>,
-                     <p className="font-white">VISIT HERE: <a href="https://haven-of-happiness.herokuapp.com/" target="_blank">Haven Of Happiness</a></p>]
+                     <p className="font-white">VISIT HERE: <a href="ec2-54-176-234-58.us-west-1.compute.amazonaws.com:5000" target="_blank">Haven Of Happiness</a></p>]
                      :
                      [<h2>{title}</h2>,
                      <p>{tech}</p>,
