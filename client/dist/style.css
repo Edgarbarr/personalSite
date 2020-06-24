@@ -108,11 +108,10 @@
 }
 .animation-close{
     height: 210;
-    animation: animation-close 1s forwards;
-    -moz-animation: animation-close 1s forwards; /* Firefox */
-    -webkit-animation: animation-close 1s forwards; /* Safari and Chrome */
-    -o-animation: animation-close 1s forwards; /* Opera */
-    animation-delay: .2s;
+    animation: animation-close .3s forwards;
+    -moz-animation: animation-close .3s forwards; /* Firefox */
+    -webkit-animation: animation-close .3s forwards; /* Safari and Chrome */
+    -o-animation: animation-close .3s forwards; /* Opera */
     align-items: baseline !important;
 }
 @keyframes animation-close {
@@ -274,8 +273,8 @@
     display: inline;
 }
 .social_media{
-    height: 100px;
-    width: 100px;
+    height: 70px;
+    width: 70px;
 }
 
 .center {
@@ -299,7 +298,7 @@
     padding: 10px 0 10px 0;
 }
 p{
-    text-align: justify;
+    /* text-align: justify; */
     margin: auto;
 }
 .center-align{
@@ -325,6 +324,7 @@ p{
      justify-content: center;
      align-items: center;
      text-align: center;
+     padding-top: 5px;
  }
  .margin-10{
      margin: 5px 10px;
