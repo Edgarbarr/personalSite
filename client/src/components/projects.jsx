@@ -29,12 +29,12 @@ function Projects(){
         }
     ])
 
-    var projectTemplate = <div className="container-fluid size-tran">
+    var projectTemplate = <div className="container-fluid">
         {projectsData.map((projectData, index) => {
         var {title, tech, description, video} = projectData;
         return (index % 2 === 1) ? 
-        <div className="row wte padding-50 size-tran">
-                 <video className="fadein col-12 col-md-8" width="820"  autoPlay loop muted playsinline>
+        <div className="row wte padding-50">
+                 <video className="fadein col-12 col-md-8" width="820" autoPlay loop muted playsInline>
                      <source src={video} type="video/mp4"/>
                      Your browser does not support the video tag.
                  </video>
@@ -45,12 +45,12 @@ function Projects(){
                  </div>
              </div> 
              :
-             <div className="row blk padding-50 size-tran">
+             <div className="row blk padding-50">
                  {(title === "Haven Of Happiness") ?
                  <img className="fadein col-12 col-md-8" src="hoh.png"/>
 
                  :
-                 <video className="fadein col-12 col-md-8" width="820" autoPlay loop muted playsinline>
+                 <video className="fadein col-12 col-md-8" width="820" autoPlay loop muted playsInline>
                      <source src={video} type="video/mp4"/>
                      Your browser does not support the video tag.
                  </video>
