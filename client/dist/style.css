@@ -112,36 +112,37 @@
     -moz-animation: animation-close .3s forwards; /* Firefox */
     -webkit-animation: animation-close .3s forwards; /* Safari and Chrome */
     -o-animation: animation-close .3s forwards; /* Opera */
+    animation-delay: 5s;
     align-items: baseline !important;
 }
 @keyframes animation-close {
     from {
-        height: 210px;
-    }
+        height: inherit;  
+        }
     to {
         height:100px;
     }
 }
 @-moz-keyframes animation-close { /* Firefox */
     from {
-        height: 210px;
-    }
+        height: inherit;  
+          }
     to {
         height:100px;
     }
 }
 @-webkit-keyframes animation-close { /* Safari and Chrome */
     from {
-        height: 210px;
-    }
+        height: inherit;  
+         }
     to {
         height:100px;
     }
 }
 @-o-keyframes animation-close { /* Opera */
     from {
-        height: 210px;
-    }
+        height: inherit;  
+      }
     to {
         height:100px;
     }
@@ -211,7 +212,7 @@
     height: fit-content;
 }
 .padding-top{
-    padding-top: 100px;
+    padding: 50px;
 }
 .slide-down{
     height: 0;
@@ -296,6 +297,9 @@
 }
 .padding-10{
     padding: 10px 0 10px 0;
+}
+.margin-10 {
+    margin: 10px 0;
 }
 p{
     /* text-align: justify; */
