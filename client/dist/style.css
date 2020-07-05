@@ -339,3 +339,6 @@ p{
  .social-spacing{
     justify-content: start;
  }
+.text-justify{
+    text-align: justify;
+}
