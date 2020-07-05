@@ -13,7 +13,7 @@ function Projects(){
             title: "Trafalgar Trip Detail Page Mockup",
             tech: "React | HMTL5 | CSS3 | MongoDB | Express",
             description: "An online webpage that details a trip of the clients choosing.",
-            video: "Trafalgar (9).mp4"
+            video: "Trafalgar.mp4"
         },
         {
             title: "Trivia Game",
