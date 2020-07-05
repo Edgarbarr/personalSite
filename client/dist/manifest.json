@@ -1,0 +1,9 @@
+{
+ "name": "Edgar Barrientos Portfolio",
+ "short_name": "Edgar Portfolio",
+ "theme_color": "gold",
+ "orientation": "portrait-primary",
+ "background_color": "black",
+ "display": "standalone",
+ "start_url": "/"
+}
