@@ -1,0 +1,77 @@
+{
+  "errors": [],
+  "warnings": [
+    "./node_modules/express/lib/view.js 74:13-25\nCritical dependency: the request of a dependency is an expression\n @ ./node_modules/express/lib/application.js\n @ ./node_modules/express/lib/express.js\n @ ./node_modules/express/index.js\n @ ./server/index.js",
+    "configuration\nThe 'mode' option has not been set, webpack will fallback to 'production' for this value. Set 'mode' option to 'development' or 'production' to enable defaults for each environment.\nYou can also set it to 'none' to disable any default behavior. Learn more: https://webpack.js.org/configuration/mode/"
+  ],
+  "version": "4.42.1",
+  "hash": "f003017291309d80cd67",
+  "publicPath": "",
+  "outputPath": "/Users/edgarbarrientos/personalSite/server",
+  "assetsByChunkName": {
+    "main": "serverBundle.js"
+  },
+  "assets": [
+    {
+      "name": "serverBundle.js",
+      "size": 915546,
+      "chunks": [
+        0
+      ],
+      "chunkNames": [
+        "main"
+      ],
+      "info": {},
+      "emitted": false
+    },
+    {
+      "name": "serverBundle.js.br",
+      "size": 227125,
+      "chunks": [],
+      "chunkNames": [],
+      "info": {},
+      "emitted": false
+    },
+    {
+      "name": "serverBundle.js.gz",
+      "size": 319654,
+      "chunks": [],
+      "chunkNames": [],
+      "info": {},
+      "emitted": false
+    }
+  ],
+  "filteredAssets": 0,
+  "entrypoints": {
+    "main": {
+      "chunks": [
+        0
+      ],
+      "assets": [
+        "serverBundle.js"
+      ],
+      "children": {},
+      "childAssets": {}
+    }
+  },
+  "namedChunkGroups": {
+    "main": {
+      "chunks": [
+        0
+      ],
+      "assets": [
+        "serverBundle.js"
+      ],
+      "children": {},
+      "childAssets": {}
+    }
+  },
+  "logging": {
+    "webpack.buildChunkGraph.visitModules": {
+      "entries": [],
+      "filteredEntries": 2,
+      "debug": false
+    }
+  },
+  "children": []
+}

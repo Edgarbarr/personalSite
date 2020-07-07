@@ -4,11 +4,30 @@ const path = require('path');
 const port = 3002;
 const bodyparser = require('body-parser');
 const nodemailer = require('nodemailer');
+import {StaticRouter as Router} from "react-router-dom";
+import fs from 'fs';
+import React from 'react';
+import ReactDOMServer, {renderToString} from 'react-dom/server';
+import App from '../client/src/components/app.jsx';
 
 
 app.use(bodyparser.json());
 app.use(bodyparser.urlencoded({extended: true}))
-
+app.get('*js', function (req, res, next) {
+    req.url = req.url + '.br';
+    res.set('Content-Encoding', 'brotli');
+    next();
+  });
+//   app.get('*.html', function (req, res, next) {
+//     req.url = req.url + '.br';
+//     res.set('Content-Encoding', 'brotli');
+//     next();
+//   });
+//   app.get('*.', function (req, res, next) {
+//     req.url = req.url + '.br';
+//     res.set('Content-Encoding', 'brotli');
+//     next();
+//   });
 app.post('/api/form', (req, res) => {
     nodemailer.createTestAccount((err, account) => {
         const htmlEmail = `
@@ -46,32 +65,43 @@ app.post('/api/form', (req, res) => {
             }
         })
     })
-})
-app.get('*.js', function (req, res, next) {
-    req.url = req.url + '.gz';
-    res.set('Content-Encoding', 'gzip');
-    next();
-  });
-  
+});
 app.listen(port, ()=>{console.log(`Now listening on port: ${port}`)});
+
+
+app.use('^/$', (req, res, next) => {
+
+    let context = {};
+    fs.readFile(path.resolve('server/index.html'), 'utf-8', (err, data) =>{
+        if(err){
+            console.log(err);
+            return res.status(500).send("error");
+        }
+        return res.send(data.replace('<div id="app"></div>', `<div id="app">${renderToString(<Router location={`${req.originalUrl}`} context={context}><App/></Router>)}</div>`))
+    })
+})
 app.use(express.static(path.join(__dirname, '../client/dist')));
-app.get('*', function (req, res){
-    var urlpaths = ["/projects", "/resume", "/contact"]
-    if(urlpaths.includes(req.url)){
-        res.sendFile(path.resolve(__dirname, '../client/dist', 'index.html'))
-    } else {
-        res.send(`
-        <!DOCTYPE html>
-        <html lang="en">
-        <head>
-            <meta charset="UTF-8">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <title>EdgarBarrientos.com</title>
-        </head>
-        <body>  
-            <div id="app"><h1>Page Not Found: 404</h1></div>  
-        </body>
-        </html>
-        `)
-    }
-  })
+
+
+  
+
+// app.get('*', function (req, res){
+//     var urlpaths = ["/projects", "/resume", "/contact"]
+//     if(urlpaths.includes(req.url)){
+//         res.sendFile(path.resolve(__dirname, '../client/dist', 'index.html'))
+//     } else {
+//         res.send(`
+//         <!DOCTYPE html>
+//         <html lang="en">
+//         <head>
+//             <meta charset="UTF-8">
+//             <meta name="viewport" content="width=device-width, initial-scale=1.0">
+//             <title>EdgarBarrientos.com</title>
+//         </head>
+//         <body>  
+//             <div id="app"><h1>Page Not Found: 404</h1></div>  
+//         </body>
+//         </html>
+//         `)
+//     }
+//   })
