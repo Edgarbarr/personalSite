@@ -47,7 +47,7 @@ function Projects(){
              :
              <div className="row blk padding-50">
                  {(title === "Haven Of Happiness") ?
-                 <img className="fadein col-12 col-md-8" src="hoh.png"/>
+                 <img className="fadein col-12 col-md-8" src="hoh.png" alt="Haven of Happiness frontpage snapshot"/>
 
                  :
                  <video className="fadein col-12 col-md-8" width="820" autoPlay loop muted playsInline>
