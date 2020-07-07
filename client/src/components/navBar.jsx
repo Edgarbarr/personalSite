@@ -13,7 +13,7 @@ function NavBar(){
     }
     return (
         <nav id="nav" className="navbar navbar-expand-sm navbar-light nav-bar animation-open">
-            <img className="logo fadein" src="/logo.png"/><h4 className="fadein">Software Engineer</h4>
+            <img className="logo fadein" src="/logo.png" alt="EB Logo"/><h4 className="fadein">Software Engineer</h4>
             <div className="fadein collapse navbar-collapse" id="collapseDiv">
                 <ul className="navbar-nav mr-auto justify-align">
                     <Link to="/"><li className="navbar-brand margin-none">Home</li></Link>
