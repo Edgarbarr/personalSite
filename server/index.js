@@ -4,6 +4,7 @@ const path = require('path');
 const port = 3002;
 const bodyparser = require('body-parser');
 const nodemailer = require('nodemailer');
+var expressStaticGzip = require("express-static-gzip")
 import {StaticRouter as Router} from "react-router-dom";
 import fs from 'fs';
 import React from 'react';
@@ -13,11 +14,7 @@ import App from '../client/src/components/app.jsx';
 
 app.use(bodyparser.json());
 app.use(bodyparser.urlencoded({extended: true}))
-app.get('*js', function (req, res, next) {
-    req.url = req.url + '.br';
-    res.set('Content-Encoding', 'brotli');
-    next();
-  });
+
 //   app.get('*.html', function (req, res, next) {
 //     req.url = req.url + '.br';
 //     res.set('Content-Encoding', 'brotli');
@@ -68,8 +65,12 @@ app.post('/api/form', (req, res) => {
 });
 app.listen(port, ()=>{console.log(`Now listening on port: ${port}`)});
 
+app.use(expressStaticGzip(path.join(__dirname, '../client/dist'),{
+    enableBrotli: true,
+    orderPreference: ['br']
+}));
 
-app.use('^/$', (req, res, next) => {
+app.use('/*', (req, res, next) => {
 
     let context = {};
     fs.readFile(path.resolve('server/index.html'), 'utf-8', (err, data) =>{
@@ -77,13 +78,15 @@ app.use('^/$', (req, res, next) => {
             console.log(err);
             return res.status(500).send("error");
         }
+        console.log(req.originalUrl)
         return res.send(data.replace('<div id="app"></div>', `<div id="app">${renderToString(<Router location={`${req.originalUrl}`} context={context}><App/></Router>)}</div>`))
     })
 })
-app.use(express.static(path.join(__dirname, '../client/dist')));
 
 
-  
+
+
+
 
 // app.get('*', function (req, res){
 //     var urlpaths = ["/projects", "/resume", "/contact"]
