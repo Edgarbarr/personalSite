@@ -1,28 +1,25 @@
 import React from "react";
+import scrollToTop from "./scrollToTop.jsx";
 
-function Resume(){
-    return (
-        <div>
-            <div className="container-fluid blk desktop-resume">
-                <div className="row ">
-                    <div className="col-12">
-                        <a href="embresume.pdf" download>Download Resume</a>
-                    </div>
-                    <div className="col-12 center-align">
-                        <img className="center"src="embresume.png"/>
-                    </div>
-                </div>
-            </div>
-            <embed className="mobile-resume"
-    src="embresume.pdf"
-    type="application/pdf"
-    frameBorder="0"
-    scrolling="auto"
-    height="100%"
-    width="100%"
-></embed>
+function Resume() {
+  scrollToTop();
+  return (
+    <div>
+      <div
+        className="container-fluid desktop-resume"
+        style={{ backgroundColor: "#f3f3f3" }}
+      >
+        <div className="row" style={{ height: "600px" }}>
+          <object
+            type="application/pdf"
+            data="embresume.pdf"
+            width="100%"
+            height="100%"
+          ></object>
         </div>
-    )
+      </div>
+    </div>
+  );
 }
 
 export default Resume;
