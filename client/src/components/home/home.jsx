@@ -98,7 +98,6 @@ function Home() {
         </Main>
       </HomeContainer>
       <ImageContainer2>
-        <div className="e-with-fixed-bg"><div className="bg-wrap"><div className="e-container"></div></div></div>
         <h1>To Full Stack Developer</h1>
       </ImageContainer2>
       <HomeContainer>
