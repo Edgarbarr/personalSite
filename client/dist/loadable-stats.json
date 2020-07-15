@@ -4,11 +4,12 @@
     "configuration\nThe 'mode' option has not been set, webpack will fallback to 'production' for this value. Set 'mode' option to 'development' or 'production' to enable defaults for each environment.\nYou can also set it to 'none' to disable any default behavior. Learn more: https://webpack.js.org/configuration/mode/"
   ],
   "version": "4.42.1",
-  "hash": "7de83146e0ad756679a2",
+  "hash": "8553407cf57307fc5c01",
   "publicPath": "/",
   "outputPath": "/Users/edgarbarrientos/personalSite/client/dist",
   "assetsByChunkName": {
     "contact-jsx": "contact-jsx.bundle.js",
+    "footer-footer-jsx": "footer-footer-jsx.bundle.js",
     "home-home-jsx": "home-home-jsx.bundle.js",
     "main": "bundle.js",
     "projects-projects-jsx": "projects-projects-jsx.bundle.js",
@@ -18,9 +19,9 @@
   "assets": [
     {
       "name": "bundle.js",
-      "size": 203712,
+      "size": 203503,
       "chunks": [
-        2
+        3
       ],
       "chunkNames": [
         "main"
@@ -30,7 +31,7 @@
     },
     {
       "name": "bundle.js.br",
-      "size": 56248,
+      "size": 56059,
       "chunks": [],
       "chunkNames": [],
       "info": {},
@@ -38,7 +39,7 @@
     },
     {
       "name": "bundle.js.gz",
-      "size": 64478,
+      "size": 64368,
       "chunks": [],
       "chunkNames": [],
       "info": {},
@@ -57,10 +58,22 @@
       "emitted": false
     },
     {
-      "name": "home-home-jsx.bundle.js",
-      "size": 14378,
+      "name": "footer-footer-jsx.bundle.js",
+      "size": 787,
       "chunks": [
         1
+      ],
+      "chunkNames": [
+        "footer-footer-jsx"
+      ],
+      "info": {},
+      "emitted": false
+    },
+    {
+      "name": "home-home-jsx.bundle.js",
+      "size": 14606,
+      "chunks": [
+        2
       ],
       "chunkNames": [
         "home-home-jsx"
@@ -70,7 +83,7 @@
     },
     {
       "name": "home-home-jsx.bundle.js.br",
-      "size": 2618,
+      "size": 2638,
       "chunks": [],
       "chunkNames": [],
       "info": {},
@@ -78,7 +91,7 @@
     },
     {
       "name": "home-home-jsx.bundle.js.gz",
-      "size": 3145,
+      "size": 3180,
       "chunks": [],
       "chunkNames": [],
       "info": {},
@@ -88,7 +101,7 @@
       "name": "projects-projects-jsx.bundle.js",
       "size": 7199,
       "chunks": [
-        3
+        4
       ],
       "chunkNames": [
         "projects-projects-jsx"
@@ -100,7 +113,7 @@
       "name": "resume-jsx.bundle.js",
       "size": 637,
       "chunks": [
-        4
+        5
       ],
       "chunkNames": [
         "resume-jsx"
@@ -112,7 +125,7 @@
       "name": "vendors~contact-jsx.bundle.js",
       "size": 13603,
       "chunks": [
-        5
+        6
       ],
       "chunkNames": [
         "vendors~contact-jsx"
@@ -141,7 +154,7 @@
   "entrypoints": {
     "main": {
       "chunks": [
-        2
+        3
       ],
       "assets": [
         "bundle.js"
@@ -153,7 +166,7 @@
   "namedChunkGroups": {
     "main": {
       "chunks": [
-        2
+        3
       ],
       "assets": [
         "bundle.js"
@@ -163,7 +176,7 @@
     },
     "projects-projects-jsx": {
       "chunks": [
-        3
+        4
       ],
       "assets": [
         "projects-projects-jsx.bundle.js"
@@ -173,7 +186,7 @@
     },
     "resume-jsx": {
       "chunks": [
-        4
+        5
       ],
       "assets": [
         "resume-jsx.bundle.js"
@@ -183,7 +196,7 @@
     },
     "contact-jsx": {
       "chunks": [
-        5,
+        6,
         0
       ],
       "assets": [
@@ -195,10 +208,20 @@
     },
     "home-home-jsx": {
       "chunks": [
-        1
+        2
       ],
       "assets": [
         "home-home-jsx.bundle.js"
+      ],
+      "children": {},
+      "childAssets": {}
+    },
+    "footer-footer-jsx": {
+      "chunks": [
+        1
+      ],
+      "assets": [
+        "footer-footer-jsx.bundle.js"
       ],
       "children": {},
       "childAssets": {}
