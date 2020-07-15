@@ -159,7 +159,7 @@ function Home() {
               </picture>
               <picture>
                 <source srcset="./images/mongo.webp" type="image/webp"/>
-                <img src="./images/mongo.png"/>
+                <img src="./images/mongo.jpg"/>
               </picture>
               <picture>
                 <source srcset="./images/postgres.webp" type="image/webp"/>
@@ -185,7 +185,7 @@ function Home() {
               </picture>
               <picture>
                 <source srcset="./images/jest.webp" type="image/webp"/>
-                <img src="./images/jest.png"/>
+                <img src="./images/jest.jpg"/>
               </picture>
               <picture>
                 <source srcset="./images/docker.webp" type="image/webp"/>
@@ -208,7 +208,7 @@ function Home() {
               </picture>
               <picture>
                 <source srcset="./images/linux.webp" type="image/webp"/>
-                <img src="./images/linux.png"/>
+                <img src="./images/linux.jpg"/>
               </picture>
             </SkillGrid>
           </SkillCategory>
