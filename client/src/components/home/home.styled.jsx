@@ -205,7 +205,6 @@ export const ImageContainer = styled.div`
     text-align: center;
     justify-content: center;
     align-items: center;
-    opacity: 1;
     
     h1 {
         font-size: 3rem;
@@ -244,7 +243,7 @@ display: flex;
 text-align: center;
 justify-content: center;
 align-items: center;
-opacity: 1;
+
     h1 {
         font-size: 3rem;
     }
