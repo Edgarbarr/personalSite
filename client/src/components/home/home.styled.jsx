@@ -219,6 +219,7 @@ export const ImageContainer = styled.div`
         -moz-background-size: cover;
         -o-background-size: cover;
         background-size: cover;
+        background-attachment: fixed;
         background-position: 0 90%;
         z-index:-1;
         width:100%;
@@ -259,6 +260,7 @@ opacity: 1;
         -moz-background-size: cover;
         -o-background-size: cover;
         background-size: cover;
+        background-attachment: fixed;
         z-index:-1;
         width:100%;
         height: 600px;
