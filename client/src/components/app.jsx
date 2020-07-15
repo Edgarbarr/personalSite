@@ -5,13 +5,14 @@ import NavBar from "./navbar/navBar.jsx";
 // import Projects from "./projects/projects.jsx";
 // import Resume from "./resume.jsx";
 // import Contact from "./contact.jsx";
-import Footer from "./footer/footer.jsx";
+// import Footer from "./footer/footer.jsx";
 import loadable from '@loadable/component'
 
 const Projects = loadable(() => import("./projects/projects.jsx"));
 const Resume = loadable(() => import("./resume.jsx"));
 const Contact = loadable(() => import("./contact.jsx"));
 const Home = loadable(() => import("./home/home.jsx"));
+const Footer = loadable(() => import("./footer/footer.jsx"));
 
 
 
