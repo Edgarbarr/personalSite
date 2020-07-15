@@ -233,40 +233,38 @@ export const ImageContainer = styled.div`
 
 `;
 export const ImageContainer2 = styled.div`
-    width: 100%;
-    background-color: transparent;
-    height: 600px;
-    color: white;
-	background-size: cover;
-    background-attachment: fixed;
-    background-position: 0 90%;
-    padding: 0;
-	margin: 0;
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
+width: 100%;
+position: relative;
+background-color: transparent;
+height: 600px;
+color: white;
+padding: 0;
+margin: 0;
+display: flex;
+text-align: center;
+justify-content: center;
+align-items: center;
+opacity: 1;
     h1 {
         font-size: 3rem;
     }
     
 
-    :after {
+    :after{
         content:'';
         position: absolute;
+        opacity: 1;
         background: url("fullstackdev.jpg") no-repeat center center;
         -webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;
         background-size: cover;
+        z-index:-1;
         width:100%;
         height: 600px;
-        z-index:-1;
         overflow:hidden;
-        opacity: 1;
         top: 0; 
         left: 0; 
-
     }
     
 }
