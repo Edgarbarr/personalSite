@@ -1,7 +1,7 @@
 const path = require("path");
 var BrotliGzipPlugin = require("brotli-gzip-webpack-plugin");
-const LoadablePlugin = require('@loadable/webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const LoadablePlugin = require('@loadable/webpack-plugin')
 const client = {
   entry: "./client/src/index.jsx",
   output: {
@@ -54,6 +54,7 @@ const client = {
       threshold: 10240,
       minRatio: 0.8,
     }),
+    new LoadablePlugin()
     
   ],
 
@@ -80,7 +81,7 @@ const server = {
         loader: "babel-loader",
         options: {
           presets: ["@babel/preset-env", "@babel/preset-react"],
-          plugins: ["@babel/plugin-syntax-dynamic-import"],
+          plugins: ["@babel/plugin-syntax-dynamic-import", "@loadable/babel-plugin"],
         },
       },
       {

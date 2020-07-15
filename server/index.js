@@ -10,6 +10,7 @@ import fs from 'fs';
 import React from 'react';
 import ReactDOMServer, {renderToString} from 'react-dom/server';
 import App from '../client/src/components/app.jsx';
+import { ChunkExtractor } from '@loadable/server';
 
 
 app.use(bodyparser.json());
@@ -69,7 +70,10 @@ app.use(expressStaticGzip(path.join(__dirname, '../client/dist'),{
     enableBrotli: true,
     orderPreference: ['br']
 }));
+const statsFile = path.resolve(__dirname,'../client/dist/loadable-stats.json')
+const extractor = new ChunkExtractor({ statsFile });
 
+const jsx = extractor.collectChunks(<App />)
 app.use('/*', (req, res, next) => {
 
     let context = {};
@@ -79,10 +83,13 @@ app.use('/*', (req, res, next) => {
             return res.status(500).send("error");
         }
         console.log(req.originalUrl)
-        return res.send(data.replace('<div id="app"></div>', `<div id="app">${renderToString(<Router location={`${req.originalUrl}`} context={context}><App/></Router>)}</div>`))
+    return res.send(data.replace('<div id="app"></div>', `<div id="app">${renderToString(<Router location={`${req.originalUrl}`} context={context}>${jsx}</Router>)}</div>`))
     })
 })
 
+// const scriptTags = extractor.getScriptTags() ;
+// const linkTags = extractor.getLinkTags();
+// const styleTags = extractor.getStyleTags()
 
 
 
