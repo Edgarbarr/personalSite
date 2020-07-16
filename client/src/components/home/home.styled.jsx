@@ -229,7 +229,7 @@ export const ImageContainer = styled.div`
     }
     @media and screen (max-width: 768px) {
         :after {
-            background-attachment: initial;
+            background-attachment: scroll;
         }
     }
 
