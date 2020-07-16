@@ -14,9 +14,6 @@ export const HomeContainer = styled.div`
             flex-direction: column-reverse;
         }
     }
-    
-    
-
 `;
 export const Main = styled.div`
     display: flex;
@@ -49,13 +46,8 @@ export const Main = styled.div`
             color: goldenrod;
             text-shadow: 1px 1px 1px  rgb(63, 63, 63) ;
         }
-    
-        
-    
     }
     
-    
-
     &.quote-container {
         width: 100%;
         height: 600px;

@@ -104,7 +104,7 @@ function Home() {
         <Main className="quote-container">
           <div className="quote">
             <span>
-              Now I have the skills to contribute to your companies bottom line.
+              Now I have the skills to contribute to your company's bottom line.
             </span>
           </div>
         </Main>
