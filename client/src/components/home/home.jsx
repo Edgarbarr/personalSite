@@ -54,7 +54,7 @@ function Home() {
         <Main className="tech">
           <div className="quote ">
             <span>
-              In the army I was an electronics technician and in charge of the
+              In the army, I was an electronics technician and in charge of the
               arms room.
             </span>
           </div>
