@@ -206,6 +206,7 @@ export const ImageContainer = styled.div`
     justify-content: center;
     align-items: center;
     
+    
     h1 {
         font-size: 3rem;
     }
@@ -220,23 +221,13 @@ export const ImageContainer = styled.div`
         background-size: cover;
         background-attachment: fixed;
         z-index:-1;
-        width:100vw;
-        height: 100vh;
+        width:100%;
+        height: 600px;
         overflow:hidden;
         top: 0; 
         left: 0; 
     }
-    @media and screen (max-width: 768px) {
-        background: url("https://scontent-lax3-2.xx.fbcdn.net/v/t1.0-9/42645890_10212796284049303_53266828650086400_n.jpg?_nc_cat=107&_nc_sid=174925&_nc_oc=AQnSSh145cP2yFA0acjRTvBa9ScAp5ZlChjbJPePbKuAdOQs_epQ_tk6ImB6rMZWXX5zW2_Nvi-rJjQ4VQ1JzNzr&_nc_ht=scontent-lax3-2.xx&oh=f4a192ae623791a6314f28802890aca3&oe=5F2CE1D9") no-repeat center center;
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
-        background-size: cover;
-        :after {
-            background: none;
-            display: none;
-        }
-    }
+
 
     
 }
@@ -276,18 +267,7 @@ align-items: center;
         overflow:hidden;
         top: 0; 
         left: 0; 
-
-        @media and screen (max-width: 768px) {
-            background: url("fullstackdev.jpg") no-repeat center center;
-            -webkit-background-size: cover;
-            -moz-background-size: cover;
-            -o-background-size: cover;
-            background-size: cover;
-            :after {
-                background: none;
-                display: none;
-            }
-        }
+        
     }
     
 }
