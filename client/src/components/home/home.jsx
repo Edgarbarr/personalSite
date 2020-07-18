@@ -12,6 +12,7 @@ import {
   SkillGrid,
 } from "./home.styled.jsx";
 import scrollToTop from "../scrollToTop.jsx";
+import 'lazysizes';
 
 
 let callback = (entries) => { 
@@ -60,7 +61,7 @@ function Home() {
         <Aside className="about">
           <div className="laptop-pic">
             <picture>
-              <source srcSet="./images/laptop.webp" type="image/webp"/>
+              <source data-srcset="./images/laptop.webp" type="image/webp"/>
               <img src="./images/laptop.png"/>
             </picture>
           </div>
@@ -92,7 +93,7 @@ function Home() {
           <div className="armspic">
             <div>
             <picture>
-              <source srcSet="./images/armspic.webp" type="image/webp"/>
+              <source data-srcset="./images/armspic.webp" type="image/webp"/>
               <img src="./images/armspic.png"/>
             </picture>
             </div>
@@ -120,8 +121,8 @@ function Home() {
         <Aside className="crip">
         <div className="picberet">
         <picture>
-              <source srcSet="./images/soldierpic.webp" type="image/webp"/>
-              <img className="lazyload" src="./images/soldierpic.png"/>
+              <source data-srcset="./images/soldierpic.webp" type="image/webp"/>
+              <img className="lazyload" data-src="./images/soldierpic.png"/>
             </picture>
         </div>
         </Aside>
@@ -162,26 +163,26 @@ function Home() {
             </SkillTitle>
             <SkillGrid>
               <picture>
-                <source srcset="./images/javascript.webp" type="image/webp"/>
-                <img className="lazyload" src="./images/javascript.png"/>
+                <source data-srcset="./images/javascript.webp" type="image/webp"/>
+                <img className="lazyload" data-src="./images/javascript.png"/>
               </picture>
               
               <picture>
-                <source srcset="./images/css.webp" type="image/webp"/>
-                <img className="lazyload" src="./images/css.png"/>
+                <source data-srcset="./images/css.webp" type="image/webp"/>
+                <img className="lazyload" data-src="./images/css.png"/>
               </picture>
               
               <picture>
-                <source srcset="./images/html.webp" type="image/webp"/>
-                <img className="lazyload" src="./images/html.png"/>
+                <source data-srcset="./images/html.webp" type="image/webp"/>
+                <img className="lazyload" data-src="./images/html.png"/>
               </picture>
               <picture>
-                <source srcset="./images/bootstrap.webp" type="image/webp"/>
-                <img className="lazyload" src="./images/bootstrap.png"/>
+                <source data-srcset="./images/bootstrap.webp" type="image/webp"/>
+                <img className="lazyload" data-src="./images/bootstrap.png"/>
               </picture>
               <picture>
-                <source srcset="./images/react.webp" type="image/webp"/>
-                <img className="lazyload" src="./images/react.png"/>
+                <source data-srcset="./images/react.webp" type="image/webp"/>
+                <img className="lazyload" data-src="./images/react.png"/>
               </picture>
             </SkillGrid>
           </SkillCategory>
@@ -191,24 +192,24 @@ function Home() {
             </SkillTitle>
             <SkillGrid>
             <picture>
-                <source srcset="./images/node.webp" type="image/webp"/>
-                <img className="lazyload" src="./images/node.png"/>
+                <source data-srcset="./images/node.webp" type="image/webp"/>
+                <img className="lazyload" data-src="./images/node.png"/>
               </picture>
               <picture>
-                <source srcset="./images/express.webp" type="image/webp"/>
-                <img className="lazyload" src="./images/express.png"/>
+                <source data-srcset="./images/express.webp" type="image/webp"/>
+                <img className="lazyload" data-src="./images/express.png"/>
               </picture>
               <picture>
-                <source srcset="./images/npm.webp" type="image/webp"/>
-                <img className="lazyload" src="./images/npm.png"/>
+                <source data-srcset="./images/npm.webp" type="image/webp"/>
+                <img className="lazyload" data-src="./images/npm.png"/>
               </picture>
               <picture>
-                <source srcset="./images/mongo.webp" type="image/webp"/>
-                <img className="lazyload" src="./images/mongo.jpg"/>
+                <source data-srcset="./images/mongo.webp" type="image/webp"/>
+                <img className="lazyload" data-src="./images/mongo.jpg"/>
               </picture>
               <picture>
-                <source srcset="./images/postgres.webp" type="image/webp"/>
-                <img className="lazyload" src="./images/postgres.png"/>
+                <source data-srcset="./images/postgres.webp" type="image/webp"/>
+                <img className="lazyload" data-src="./images/postgres.png"/>
               </picture>
             </SkillGrid>
           </SkillCategory>
@@ -218,23 +219,23 @@ function Home() {
             </SkillTitle>
             <SkillGrid>
             <picture>
-                <source srcset="./images/aws.webp" type="image/webp"/>
-                <img className="lazyload" src="./images/aws.png"/>
+                <source data-srcset="./images/aws.webp" type="image/webp"/>
+                <img className="lazyload" data-src="./images/aws.png"/>
               </picture>
               <picture>
-                <source srcset="./images/heroku.webp" type="image/webp"/>
-                <img className="lazyload" src="./images/heroku.png"/>
+                <source data-srcset="./images/heroku.webp" type="image/webp"/>
+                <img className="lazyload" data-src="./images/heroku.png"/>
               </picture>
               <picture>
-                <img className="lazyload" src="./images/Nginx.svg"/>
+                <img className="lazyload" data-src="./images/Nginx.svg"/>
               </picture>
               <picture>
-                <source srcset="./images/jest.webp" type="image/webp"/>
-                <img className="lazyload" src="./images/jest.jpg"/>
+                <source data-srcset="./images/jest.webp" type="image/webp"/>
+                <img className="lazyload" data-src="./images/jest.jpg"/>
               </picture>
               <picture>
-                <source srcset="./images/docker.webp" type="image/webp"/>
-                <img className="lazyload" src="./images/docker.png"/>
+                <source data-srcset="./images/docker.webp" type="image/webp"/>
+                <img className="lazyload" data-src="./images/docker.png"/>
               </picture>
             </SkillGrid>
           </SkillCategory>
@@ -244,16 +245,16 @@ function Home() {
             </SkillTitle>
             <SkillGrid className="three">
             <picture>
-                <source srcset="./images/git.webp" type="image/webp"/>
-                <img className="lazyload" src="./images/git.png"/>
+                <source data-srcset="./images/git.webp" type="image/webp"/>
+                <img className="lazyload" data-src="./images/git.png"/>
               </picture>
               <picture>
-                <source srcset="./images/webpack.webp" type="image/webp"/>
-                <img className="lazyload" src="./images/webpack.png"/>
+                <source data-srcset="./images/webpack.webp" type="image/webp"/>
+                <img className="lazyload" data-src="./images/webpack.png"/>
               </picture>
               <picture>
-                <source srcset="./images/linux.webp" type="image/webp"/>
-                <img className="lazyload" src="./images/linux.jpg"/>
+                <source data-srcset="./images/linux.webp" type="image/webp"/>
+                <img className="lazyload" data-src="./images/linux.jpg"/>
               </picture>
             </SkillGrid>
           </SkillCategory>
