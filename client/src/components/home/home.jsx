@@ -61,7 +61,7 @@ function Home() {
           <div className="laptop-pic">
             <picture>
               <source data-srcset="./images/laptop.webp" type="image/webp"/>
-              <img className="lazyload" data-src="./images/laptop.png"/>
+              <img className="lazyload qfi" data-src="./images/laptop.png"/>
             </picture>
           </div>
         </Aside>
