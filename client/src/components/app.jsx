@@ -30,7 +30,6 @@ const Footer = loadable(() => import("./footer/footer.jsx"), {
 function App() {
   var [loading, setLoading] = useState(false);
   useEffect(() => {
-    console.log(Projects)
   },[Projects, Resume, Contact, Home])
   return (
     <div className="soItBegins">

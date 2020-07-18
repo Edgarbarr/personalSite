@@ -433,6 +433,8 @@ li:hover {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  width: 100%;
+  height: 100%;
 }
 
 
@@ -441,4 +443,42 @@ li:hover {
   font-family: 'Rubik', Arial, Helvetica, sans-serif;
 }
 
+.fade-in {
+  -webkit-animation: fadein 2s forwards; /* Safari, Chrome and Opera > 12.1 */
+     -moz-animation: fadein 2s forwards; /* Firefox < 16 */
+      -ms-animation: fadein 2s forwards; /* Internet Explorer */
+       -o-animation: fadein 2s forwards; /* Opera < 12.1 */
+          animation: fadein 2s forwards;
+}
 
+@keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* Opera < 12.1 */
+@-o-keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+.crip div {
+  opacity: 0;
+}

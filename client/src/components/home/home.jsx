@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect} from "react";
 import { Link } from "react-router-dom";
 import {
   HomeContainer,
@@ -13,7 +13,31 @@ import {
 } from "./home.styled.jsx";
 import scrollToTop from "../scrollToTop.jsx";
 
+
+let callback = (entries) => { 
+  entries.forEach(entry => {
+      if(entry.isIntersecting) {
+          entry.target.classList.add('fade-in');
+          observer.unobserve(entry.target);
+      }
+  });
+}
+let options = {
+  root: null,
+  rootMargin: '0px',
+  threshold: .5
+}
+let observer = new IntersectionObserver(callback, options);
+
+
+
 function Home() {
+  useEffect(()=>{
+    const elements = [...document.querySelectorAll('.crip div')];
+    
+    elements.forEach((element) => {observer.observe(element)});
+
+  }, [])
   scrollToTop();
   return (
     <div>
@@ -59,7 +83,9 @@ function Home() {
             </span>
           </div>
         </Main>
-        <Aside className="armspic"></Aside>
+        <Aside className="crip">
+          <div className="armspic"></div>
+        </Aside>
       </HomeContainer>
       <HomeContainer>
         <Main className="quote-container">
@@ -79,7 +105,9 @@ function Home() {
             </span>
           </div>
         </Main>
-        <Aside className="picberet"></Aside>
+        <Aside className="crip">
+        <div className="picberet"></div>
+        </Aside>
       </HomeContainer>
       <HomeContainer className="reverse">
         <Aside className="project">

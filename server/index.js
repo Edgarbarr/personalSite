@@ -79,10 +79,8 @@ app.use('/*', (req, res, next) => {
     let context = {};
     fs.readFile(path.resolve('server/index.html'), 'utf-8', (err, data) =>{
         if(err){
-            console.log(err);
             return res.status(500).send("error");
         }
-        console.log(req.originalUrl)
     return res.send(data.replace('<div id="app"></div>', `<div id="app">${renderToString(<Router location={`${req.originalUrl}`} context={context}>${jsx}</Router>)}</div>`))
     })
 })

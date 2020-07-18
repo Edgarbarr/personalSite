@@ -114,7 +114,6 @@ export const Aside = styled.div`
     display: flex;
     width: 40%;
     height: 800px;
-    padding: 2%;
     background-color: #B6CCA1;
     
     
@@ -128,10 +127,12 @@ export const Aside = styled.div`
         background-position: 80%;
         box-shadow: 10px 10px 20px black;
     }
-    &.armspic{
+    .armspic{
         position: relative;
+        width: 100%;
+        height: 100%
     }
-    &.armspic::after{
+    .armspic::after{
         background-image: url("20180124-A-EZ917-0017.jpg");
         background-position: center;
         background-size: cover;
@@ -159,7 +160,6 @@ export const Aside = styled.div`
     }
     @media screen and (max-width: 768px){
         width: 100%;
-        padding: 2%;
         height: 400px;
         overflow: hidden;
         justify-content: center;
@@ -169,7 +169,7 @@ export const Aside = styled.div`
         &.about {
             display: none;
         }
-        &.armspic::after{
+        .armspic::after{
             top: 0;
             left: 0;
             height: 100%;

@@ -29,7 +29,7 @@ function Contact() {
         .then((res) => {
           form.reset();
           toggle(res.data);
-          console.log(res.data);
+
         });
     }
   };
