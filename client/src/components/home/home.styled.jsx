@@ -121,30 +121,53 @@ export const Aside = styled.div`
         height: 800px;
         width: 40%;
         background-color: #B6CCA1;
-        background-image: url("https://images.pexels.com/photos/459653/pexels-photo-459653.jpeg?cs=srgb&dl=apple-coffee-computer-cup-459653.jpg&fm=jpg");
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: 80%;
         box-shadow: 10px 10px 20px black;
+        .laptop-pic{
+            width:100%;
+            height: 100%;
+            overflow: hidden;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            flex-direction: row;
+            img {
+                height: 100%;
+            }
+        }
     }
-    .armspic{
+    
+    .picberet {
+        overflow: hidden;
         position: relative;
         width: 100%;
-        height: 100%
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        img {
+            height: 100%;
+        }
     }
-    .armspic::after{
-        background-image: url("20180124-A-EZ917-0017.jpg");
-        background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat;
-        content: "";
-        width: 40vw;
-        height: 350px;
+   .armspic{
+       width:100%;
+       height: 100%;
+       position: relative;
+   }
+    .armspic div{
+        width: auto;
+        height: 50%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
         position: absolute;
-        top:50%;
+        top:45%;
         left: -5%;
-        z-index: 0;
-        box-shadow: 3px 3px 5px 5px rgba(75, 75, 75, 0.486);
+        
+        img{
+            width: auto;
+            height: 100%;
+            box-shadow: 3px 3px 5px 5px rgba(75, 75, 75, 0.486);
+        }
     }
     &.project {
         display: flex;
@@ -169,11 +192,17 @@ export const Aside = styled.div`
         &.about {
             display: none;
         }
-        .armspic::after{
-            top: 0;
-            left: 0;
+        .armspic div{
             height: 100%;
             width: 100%;
+            position: static;
+            display: flex;
+            justify-content: center;
+            flex-direction: row;
+            img {
+                width: auto;
+                height: 100%;
+            }
         }
     }
     .aside-title{

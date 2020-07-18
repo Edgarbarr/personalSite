@@ -58,7 +58,12 @@ function Home() {
           </Link>
         </Main>
         <Aside className="about">
-          <div></div>
+          <div className="laptop-pic">
+            <picture>
+              <source srcSet="./images/laptop.webp" type="image/webp"/>
+              <img src="./images/laptop.png"/>
+            </picture>
+          </div>
         </Aside>
       </HomeContainer>
       <ImageContainer>
@@ -84,7 +89,14 @@ function Home() {
           </div>
         </Main>
         <Aside className="crip">
-          <div className="armspic"></div>
+          <div className="armspic">
+            <div>
+            <picture>
+              <source srcSet="./images/armspic.webp" type="image/webp"/>
+              <img src="./images/armspic.png"/>
+            </picture>
+            </div>
+          </div>
         </Aside>
       </HomeContainer>
       <HomeContainer>
@@ -106,7 +118,12 @@ function Home() {
           </div>
         </Main>
         <Aside className="crip">
-        <div className="picberet"></div>
+        <div className="picberet">
+        <picture>
+              <source srcSet="./images/soldierpic.webp" type="image/webp"/>
+              <img src="./images/soldierpic.png"/>
+            </picture>
+        </div>
         </Aside>
       </HomeContainer>
       <HomeContainer className="reverse">
