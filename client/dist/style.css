@@ -444,11 +444,11 @@ li:hover {
 }
 
 .fade-in {
-  -webkit-animation: fadein 2s forwards; /* Safari, Chrome and Opera > 12.1 */
-     -moz-animation: fadein 2s forwards; /* Firefox < 16 */
-      -ms-animation: fadein 2s forwards; /* Internet Explorer */
-       -o-animation: fadein 2s forwards; /* Opera < 12.1 */
-          animation: fadein 2s forwards;
+  -webkit-animation: fadein 1s forwards; /* Safari, Chrome and Opera > 12.1 */
+     -moz-animation: fadein 1s forwards; /* Firefox < 16 */
+      -ms-animation: fadein 1s forwards; /* Internet Explorer */
+       -o-animation: fadein 1s forwards; /* Opera < 12.1 */
+          animation: fadein 1s forwards;
 }
 
 @keyframes fadein {
