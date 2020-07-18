@@ -476,13 +476,16 @@ li:hover {
   opacity: 0;
 }
 .base-element {
-  /* -webkit-transform: translateZ(-500px);
-  transform: translateZ(-500px); */
+  -webkit-transform: translateZ(500px);
+  transform: translateZ(500px);
   z-index: 0;
 }
 
 .background-element {
-  -webkit-transform:scale(1.05);
-  transform:scale(1.05);
+ 
   z-index: -1;
+}
+.background-element::after{
+  -webkit-transform: translateY(26px) scale(1.09);
+  transform:translateY(26px) scale(1.09);
 }
