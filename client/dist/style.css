@@ -472,6 +472,6 @@ li:hover {
   from { opacity: 0; }
   to   { opacity: 1; }
 }
-.crip div {
+.crip div, .qfi {
   opacity: 0;
 }
