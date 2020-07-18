@@ -241,6 +241,7 @@ export const ImageContainer = styled.div`
         -o-background-size: cover;
         background-size: cover;
         background-attachment: fixed;
+        background-position: 50% 90% !important;
         z-index:-1;
         width:100%;
         height: 600px;
@@ -282,6 +283,7 @@ align-items: center;
         -o-background-size: cover;
         background-size: cover;
         background-attachment: fixed;
+        background-position: 50% 10% !important;
         z-index:-1;
         width:100%;
         height: 600px;

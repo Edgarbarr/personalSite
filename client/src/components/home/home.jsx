@@ -15,6 +15,8 @@ import scrollToTop from "../scrollToTop.jsx";
 import 'lazysizes';
 
 
+
+
 let callback = (entries) => { 
   entries.forEach(entry => {
       if(entry.isIntersecting) {
@@ -66,8 +68,8 @@ function Home() {
           </div>
         </Aside>
       </HomeContainer>
-      <ImageContainer>
-        <h1>From United States Soldier</h1>
+      <ImageContainer className="background-element">
+        <h1 className="base-element">From United States Soldier</h1>
       </ImageContainer>
       <HomeContainer>
         <Aside>
@@ -142,8 +144,8 @@ function Home() {
           </div>
         </Main>
       </HomeContainer>
-      <ImageContainer2>
-        <h1>To Full Stack Developer</h1>
+      <ImageContainer2 className="background-element">
+        <h1 className="base-element">To Full Stack Developer</h1>
       </ImageContainer2>
       <HomeContainer>
         <Main className="quote-container">

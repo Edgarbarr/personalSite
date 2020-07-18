@@ -475,3 +475,14 @@ li:hover {
 .crip div, .qfi {
   opacity: 0;
 }
+.base-element {
+  /* -webkit-transform: translateZ(-500px);
+  transform: translateZ(-500px); */
+  z-index: 0;
+}
+
+.background-element {
+  -webkit-transform:scale(1.05);
+  transform:scale(1.05);
+  z-index: -1;
+}
