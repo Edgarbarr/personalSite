@@ -247,15 +247,15 @@ function Home() {
             <SkillGrid className="three">
             <picture>
                 <source data-srcset="./images/git.webp" type="image/webp"/>
-                <img className="lazyload" data-src="./images/git.png"/>
+                <img className="lazyload qfi" data-src="./images/git.png"/>
               </picture>
               <picture>
                 <source data-srcset="./images/webpack.webp" type="image/webp"/>
-                <img className="lazyload" data-src="./images/webpack.png"/>
+                <img className="lazyload qfi" data-src="./images/webpack.png"/>
               </picture>
               <picture>
                 <source data-srcset="./images/linux.webp" type="image/webp"/>
-                <img className="lazyload" data-src="./images/linux.jpg"/>
+                <img className="lazyload qfi" data-src="./images/linux.jpg"/>
               </picture>
             </SkillGrid>
           </SkillCategory>
