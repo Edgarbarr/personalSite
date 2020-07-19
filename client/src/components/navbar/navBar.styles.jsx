@@ -15,6 +15,7 @@ export const Nav = styled.nav`
     box-shadow: 1px 3px 5px rgba(10, 10, 10, 0.336);
     z-index: 2;
     transition: width .1s;
+    backface-visibility: hidden;
 
     .x {
         display: flex;

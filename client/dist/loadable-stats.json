@@ -4,7 +4,7 @@
     "configuration\nThe 'mode' option has not been set, webpack will fallback to 'production' for this value. Set 'mode' option to 'development' or 'production' to enable defaults for each environment.\nYou can also set it to 'none' to disable any default behavior. Learn more: https://webpack.js.org/configuration/mode/"
   ],
   "version": "4.42.1",
-  "hash": "af297f3770cc937b8e15",
+  "hash": "a7925520c2a1fc0cb297",
   "publicPath": "/",
   "outputPath": "/Users/edgarbarrientos/personalSite/client/dist",
   "assetsByChunkName": {
@@ -19,7 +19,7 @@
   "assets": [
     {
       "name": "bundle.js",
-      "size": 205699,
+      "size": 205733,
       "chunks": [
         3
       ],
@@ -31,7 +31,7 @@
     },
     {
       "name": "bundle.js.br",
-      "size": 56718,
+      "size": 56698,
       "chunks": [],
       "chunkNames": [],
       "info": {},
@@ -39,7 +39,7 @@
     },
     {
       "name": "bundle.js.gz",
-      "size": 65014,
+      "size": 65023,
       "chunks": [],
       "chunkNames": [],
       "info": {},
@@ -71,7 +71,7 @@
     },
     {
       "name": "home-home-jsx.bundle.js",
-      "size": 25808,
+      "size": 25874,
       "chunks": [
         2
       ],
@@ -83,7 +83,7 @@
     },
     {
       "name": "home-home-jsx.bundle.js.br",
-      "size": 6328,
+      "size": 6350,
       "chunks": [],
       "chunkNames": [],
       "info": {},
@@ -91,7 +91,7 @@
     },
     {
       "name": "home-home-jsx.bundle.js.gz",
-      "size": 7228,
+      "size": 7243,
       "chunks": [],
       "chunkNames": [],
       "info": {},

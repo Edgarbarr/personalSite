@@ -493,9 +493,8 @@ li:hover {
   opacity: 0;
 }
 .base-element {
-  -webkit-transform: translateZ(1999px);
-  transform: translateZ(1900px);
   z-index: 0;
+  
 }
 
 .background-element {
@@ -504,6 +503,7 @@ li:hover {
   z-index: -1;
 }
 .background-element::after{
-  -webkit-transform: perspective(500px) translateY(26px)scale(1.09);
-  transform:perspective(500px) translateY(26px) scale(1.09);
+  -webkit-transform: translateY(26px)scale(1.09);
+  transform:translateY(26px) scale(1.09);
+
 }
