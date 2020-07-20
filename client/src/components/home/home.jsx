@@ -90,12 +90,12 @@ function Home() {
             </span>
           </div>
         </Main>
-        <Aside className="cri">
+        <Aside className="crip">
           <div className="armspic">
             <div>
             <picture>
               <source data-srcset="./images/armspic.webp" type="image/webp"/>
-              <img className="lazyload qfi" data-src="./images/armspic.png"/>
+              <img className="lazyload" data-src="./images/armspic.png"/>
             </picture>
             </div>
           </div>
@@ -119,11 +119,11 @@ function Home() {
             </span>
           </div>
         </Main>
-        <Aside className="cri">
+        <Aside className="crip">
         <div className="picberet">
         <picture>
               <source data-srcset="./images/soldierpic.webp" type="image/webp"/>
-              <img className="lazyload qfi" data-src="./images/soldierpic.png"/>
+              <img className="lazyload" data-src="./images/soldierpic.png"/>
             </picture>
         </div>
         </Aside>
