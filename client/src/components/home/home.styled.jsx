@@ -114,6 +114,7 @@ export const Aside = styled.div`
     display: flex;
     width: 40%;
     height: 800px;
+    max-width: 100%;
     background-color: #B6CCA1;
     
     
