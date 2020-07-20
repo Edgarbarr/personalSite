@@ -90,9 +90,10 @@ export const Nav = styled.nav`
         .mobile-button {
             display: block;
             height: 40px;
-            width: fit-content;
+            width: 50px;
             border: 1px solid lightgrey;
             border-radius: 10%;
+            padding: 0;
         }
 
     }
