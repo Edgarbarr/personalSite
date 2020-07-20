@@ -89,8 +89,8 @@ export const Nav = styled.nav`
         }
         .mobile-button {
             display: block;
-            height: 40px;
-            width: 50px;
+            height: 40px !important;
+            width: 50px !important;
             border: 1px solid lightgrey;
             border-radius: 10%;
             padding: 0;
