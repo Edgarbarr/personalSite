@@ -155,7 +155,7 @@ export const Aside = styled.div`
        position: relative;
    }
     .armspic div{
-        width: 100%;
+        width: auto;
         height: 50%;
         display: flex;
         flex-direction: row;
@@ -167,7 +167,6 @@ export const Aside = styled.div`
         img{
             width: auto;
             height: 100%;
-            z-index: 1;
             box-shadow: 3px 3px 5px 5px rgba(75, 75, 75, 0.486);
         }
     }
