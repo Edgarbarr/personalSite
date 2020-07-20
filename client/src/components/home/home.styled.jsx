@@ -249,6 +249,12 @@ export const ImageContainer = styled.div`
         top: 0; 
         left: 0; 
     }
+    
+    @media screen and (max-width: 768px){
+        :after{
+            background-attachment: unset;
+        }
+    }
 
 
     
@@ -291,6 +297,11 @@ align-items: center;
         top: 0; 
         left: 0; 
         
+    }
+    @media screen and (max-width: 768px){
+        :after{
+            background-attachment: unset;
+        }
     }
     
 }
