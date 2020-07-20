@@ -445,7 +445,7 @@ li:hover {
 }
 
 @keyframes fadein {
-  from { opacity: 0;
+  from { opacity: 1;
   transform: translateY(-100px); 
 }
   to   { opacity: 1;
@@ -464,7 +464,7 @@ li:hover {
 }
 /* Safari, Chrome and Opera > 12.1 */
 @-webkit-keyframes fadein {
-  0% { opacity: 0; -webkit-transform: translateY(-100px); }
+  0% { opacity: 1; -webkit-transform: translateY(-100px); }
   100%   { opacity: 1; -webkit-transform: translateY(0px);  }
 }
 /* Internet Explorer */
