@@ -436,7 +436,6 @@ li:hover {
 }
 
 .fade-in {
-  opacity: 1!important;
   -webkit-animation: fadein 1s forwards; /* Safari, Chrome and Opera > 12.1 */
      -moz-animation: fadein 1s forwards; /* Firefox < 16 */
       -ms-animation: fadein 1s forwards; /* Internet Explorer */
@@ -445,7 +444,7 @@ li:hover {
 }
 
 @keyframes fadein {
-  from { opacity: 1;
+  from { opacity: 0;
   transform: translateY(-100px); 
 }
   to   { opacity: 1;
@@ -464,8 +463,8 @@ li:hover {
 }
 /* Safari, Chrome and Opera > 12.1 */
 @-webkit-keyframes fadein {
-  0% { opacity: 1; -webkit-transform: translateY(-100px); }
-  100%   { opacity: 1; -webkit-transform: translateY(0px);  }
+  from { opacity: 0; -webkit-transform: translateY(-100px); }
+  to  { opacity: 1; -webkit-transform: translateY(0px);  }
 }
 /* Internet Explorer */
 @-ms-keyframes fadein {
