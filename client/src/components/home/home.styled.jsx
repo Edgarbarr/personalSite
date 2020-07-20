@@ -145,6 +145,7 @@ export const Aside = styled.div`
         flex-direction: row;
         justify-content: center;
         img {
+            z-index:1;
             height: 100%;
         }
     }
@@ -166,6 +167,7 @@ export const Aside = styled.div`
         img{
             width: auto;
             height: 100%;
+            z-index: 1;
             box-shadow: 3px 3px 5px 5px rgba(75, 75, 75, 0.486);
         }
     }
