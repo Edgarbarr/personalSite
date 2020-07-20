@@ -436,6 +436,7 @@ li:hover {
 }
 
 .fade-in {
+  opacity: 1!important;
   -webkit-animation: fadein 1s forwards; /* Safari, Chrome and Opera > 12.1 */
      -moz-animation: fadein 1s forwards; /* Firefox < 16 */
       -ms-animation: fadein 1s forwards; /* Internet Explorer */
