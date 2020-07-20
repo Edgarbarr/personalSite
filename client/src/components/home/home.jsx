@@ -95,7 +95,7 @@ function Home() {
             <div>
             <picture>
               <source data-srcset="./images/armspic.webp" type="image/webp"/>
-              <img className="lazyload" data-src="./images/armspic.png"/>
+              <img className="lazyload" data-src="./images/armspic.jpg"/>
             </picture>
             </div>
           </div>
@@ -123,7 +123,7 @@ function Home() {
         <div className="picberet">
         <picture>
               <source data-srcset="./images/soldierpic.webp" type="image/webp"/>
-              <img className="lazyload" data-src="./images/soldierpic.png"/>
+              <img className="lazyload" data-src="./images/soldierpic.jpg"/>
             </picture>
         </div>
         </Aside>
