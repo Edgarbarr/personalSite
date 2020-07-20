@@ -90,7 +90,7 @@ function Home() {
             </span>
           </div>
         </Main>
-        <Aside className="crip">
+        <Aside className="cri">
           <div className="armspic">
             <div>
             <picture>
@@ -119,7 +119,7 @@ function Home() {
             </span>
           </div>
         </Main>
-        <Aside className="crip">
+        <Aside className="cri">
         <div className="picberet">
         <picture>
               <source data-srcset="./images/soldierpic.webp" type="image/webp"/>
