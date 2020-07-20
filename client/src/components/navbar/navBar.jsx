@@ -58,7 +58,7 @@ var collapseHandler = () => {
                     <Link to="/resume"><li>Resume</li></Link>
                 </ul>
             </div>
-            <button onClick={collapseHandler}className="burger-button"  className="mobile-button fadein" >
+            <button onClick={collapseHandler} className="mobile-button fadein" >
                  <svg className="burger" viewBox="0 0 100 100" width="30" height="30">
                       <rect fill="grey" x="12.5" y="20" width="75" height="7" rx="3"></rect>
                       <rect fill="grey" x="12.5" y="50" width="75" height="7" rx="3"></rect>
