@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 export const FooterContainer = styled.div`
+display: -webkit-flex;
 display: flex;
 width: 100%;
 height: 75px;

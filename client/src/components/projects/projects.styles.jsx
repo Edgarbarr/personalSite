@@ -34,6 +34,7 @@ export const Project = styled.div`
     
 `;
 export const ContentContainer = styled.div`
+display: -webkit-flex;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -58,6 +59,7 @@ export const DiagLayout = styled.div`
 `;
 
 export const Description = styled.div`
+display: -webkit-flex;
     display: flex;
     width: 38%;
     margin: 2%;

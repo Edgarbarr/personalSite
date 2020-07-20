@@ -28,7 +28,7 @@ let callback = (entries) => {
 let options = {
   root: null,
   rootMargin: '0px',
-  threshold: .5
+  threshold: .1
 }
 let observer = new IntersectionObserver(callback, options);
 
@@ -63,7 +63,7 @@ function Home() {
           <div className="laptop-pic">
             <picture>
               <source data-srcset="./images/laptop.webp" type="image/webp"/>
-              <img className="lazyload qfi" data-src="./images/laptop.png"/>
+              <img className="lazyload qfi" data-src="./images/laptop.jpg"/>
             </picture>
           </div>
         </Aside>

@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const Nav = styled.nav`
+    display: -webkit-flex;
     display: flex;
     position: fixed;
     width: 100vw;
@@ -18,6 +19,7 @@ export const Nav = styled.nav`
     backface-visibility: hidden;
 
     .x {
+        display: -webkit-flex;
         display: flex;
         justify-content: center;
         width: 100%;
@@ -39,12 +41,14 @@ export const Nav = styled.nav`
     }
 
     #nav-list {
+        display: -webkit-flex;
         display: flex;
         flex-direction: row;
         width: 350px;
         justify-content: space-evenly;
         color: black;
         a {
+            display: -webkit-flex;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -57,6 +61,7 @@ export const Nav = styled.nav`
 
     @media screen and (max-width: 768px){
         #nav-list {
+            display: -webkit-flex;
             display: flex;
             padding: 0;
             margin: 0;
@@ -75,6 +80,7 @@ export const Nav = styled.nav`
             a{
                 width: 100%;
                 height: 25%;
+                display: -webkit-flex;
                 display: flex;
                 justify-content: center;
                 align-items: center;
@@ -94,6 +100,7 @@ export const Nav = styled.nav`
             border: 1px solid lightgrey;
             border-radius: 10%;
             padding: 3px 8px;
+            background-color: #f0f0f0;
 
         }
 

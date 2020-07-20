@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const HomeContainer = styled.div`
     font-family: 'Lato';
+    display: -webkit-flex;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -16,6 +17,7 @@ export const HomeContainer = styled.div`
     }
 `;
 export const Main = styled.div`
+    display: -webkit-flex;
     display: flex;
     width: 60%;
     height: 800px;
@@ -25,6 +27,7 @@ export const Main = styled.div`
         height: 800px;
         width: 60%;
         padding-left: 5%;
+        display: -webkit-flex;
         display: flex;
         flex-direction: column;
         flex-wrap: nowrap;
@@ -59,6 +62,7 @@ export const Main = styled.div`
         }
     }
     .quote {
+        display: -webkit-flex;
         display: flex;
         font-size: 3em;
         text-align: center;
@@ -111,6 +115,7 @@ export const Main = styled.div`
     }
 `;
 export const Aside = styled.div`
+display: -webkit-flex;
     display: flex;
     width: 40%;
     height: 800px;
@@ -128,11 +133,16 @@ export const Aside = styled.div`
             height: 100%;
             overflow: hidden;
             position: relative;
+            display: -webkit-flex;
             display: flex;
             justify-content: center;
             flex-direction: row;
             img {
                 height: 100%;
+                height: -moz-available;          
+                height: -webkit-fill-available; 
+                height: fill-available;
+                width: auto;
             }
         }
     }
@@ -142,11 +152,15 @@ export const Aside = styled.div`
         position: relative;
         width: 100%;
         height: 100%;
+        display: -webkit-flex;
         display: flex;
         flex-direction: row;
         justify-content: center;
         img {
             height: 100%;
+            height: -moz-available;          
+            height: -webkit-fill-available;  
+            height: fill-available;
             width: auto;
         }
     }
@@ -158,6 +172,7 @@ export const Aside = styled.div`
     .armspic div{
         width: auto;
         height: 50%;
+        display: -webkit-flex;
         display: flex;
         flex-direction: row;
         justify-content: center;
@@ -168,10 +183,14 @@ export const Aside = styled.div`
         img{
             width: auto;
             height: 100%;
+                height: -moz-available;          
+                height: -webkit-fill-available; 
+                height: fill-available;
             box-shadow: 3px 3px 5px 5px rgba(75, 75, 75, 0.486);
         }
     }
     &.project {
+        display: -webkit-flex;
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;
@@ -198,12 +217,16 @@ export const Aside = styled.div`
             height: 100%;
             width: 100%;
             position: static;
+            display: -webkit-flex;
             display: flex;
             justify-content: center;
             flex-direction: row;
             img {
                 width: auto;
                 height: 100%;
+                height: -moz-available;          
+                height: -webkit-fill-available; 
+                height: fill-available;
             }
         }
     }
@@ -223,7 +246,8 @@ export const ImageContainer = styled.div`
     height: 600px;
     color: white;
     padding: 0;
-	margin: 0;
+    margin: 0;
+    display: -webkit-flex;
     display: flex;
     text-align: center;
     justify-content: center;
@@ -271,6 +295,7 @@ height: 600px;
 color: white;
 padding: 0;
 margin: 0;
+display: -webkit-flex;
 display: flex;
 text-align: center;
 justify-content: center;
@@ -316,6 +341,7 @@ export const SkillsSection = styled.div`
     height: 2400px;
     width: 100%;
     background-color: transparent;
+    display: -webkit-flex;
     display: flex;
     flex-direction: column;
     box-shadow: 1px 1px 5px black;
@@ -325,6 +351,7 @@ export const SkillCategory = styled.div`
     position: relative;
     height: 25%;
     width: 100%;
+    display: -webkit-flex;
     display: flex;
     background-color: transparent;
     flex-direction: column;
@@ -341,11 +368,13 @@ export const SkillGrid = styled.div`
         grid-template-columns: repeat(3,1fr);
     }
     picture {
+        display: -webkit-flex;
         display: flex;
         justify-content: center;
         align-items: center;
     }
     img {
+        display: -webkit-flex;
         display: flex;
         justify-self: center;
         align-self: center;
@@ -366,6 +395,7 @@ export const SkillGrid = styled.div`
 `;
 
 export const SkillTitle= styled.div`
+display: -webkit-flex;
     display: flex;
     justify-content: center;
     align-items: center;
