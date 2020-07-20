@@ -139,7 +139,7 @@ export const Aside = styled.div`
     .picberet {
         overflow: hidden;
         position: relative;
-        width: 100%;
+        width: auto;
         height: 100%;
         display: flex;
         flex-direction: row;
@@ -150,7 +150,7 @@ export const Aside = styled.div`
         }
     }
    .armspic{
-       width:100%;
+       width:auto;
        height: 100%;
        position: relative;
    }
