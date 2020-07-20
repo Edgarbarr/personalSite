@@ -93,7 +93,7 @@ export const Nav = styled.nav`
             width: fit-content ;
             border: 1px solid lightgrey;
             border-radius: 10%;
-            padding: 3px 6px;
+            padding: 3px 8px;
 
         }
 
