@@ -149,14 +149,6 @@ function Home() {
         <div className="fullstackdiv">
           <h1 className="base-element">To Full Stack Developer</h1>
         </div>
-        {/* <section id="home-banner-box" className="home-banner loading">
-	<div className="image video-slide" style={{backgroundImage: `url("fullstackdev.jpg")`}}>
-		<div className="video-background">
-			<div className="video-foreground" id="YouTubeBackgroundVideoPlayer">
-		    </div>
-		</div>
-	</div>
-</section> */}
       </ImageContainer2>
       <HomeContainer>
         <Main className="quote-container">
