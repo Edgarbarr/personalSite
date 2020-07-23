@@ -13,6 +13,7 @@ import {
 } from "./home.styled.jsx";
 import scrollToTop from "../scrollToTop.jsx";
 import 'lazysizes';
+import { urlencoded } from "body-parser";
 
 
 
@@ -38,8 +39,8 @@ function Home() {
   useEffect(()=>{
     const elements = [...document.querySelectorAll('.crip div'), ...document.querySelectorAll(".qfi")];
     elements.forEach((element) => {observer.observe(element)});
-
   }, [])
+
   scrollToTop();
   return (
     <div>
@@ -145,7 +146,17 @@ function Home() {
         </Main>
       </HomeContainer>
       <ImageContainer2 className="background-element">
-        <h1 className="base-element">To Full Stack Developer</h1>
+        <div className="fullstackdiv">
+          <h1 className="base-element">To Full Stack Developer</h1>
+        </div>
+        <section id="home-banner-box" className="home-banner loading">
+	<div className="image video-slide" style={{backgroundImage: `url("fullstackdev.jpg")`}}>
+		<div className="video-background">
+			<div className="video-foreground" id="YouTubeBackgroundVideoPlayer">
+		    </div>
+		</div>
+	</div>
+</section>
       </ImageContainer2>
       <HomeContainer>
         <Main className="quote-container">

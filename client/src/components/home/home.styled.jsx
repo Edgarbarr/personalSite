@@ -310,7 +310,7 @@ align-items: center;
         content:'';
         position: absolute;
         opacity: 1;
-        background: url("fullstackdev.jpg") no-repeat center center;
+        // background: url("fullstackdev.jpg") no-repeat center center;
         -webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;

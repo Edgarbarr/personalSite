@@ -506,3 +506,52 @@ li:hover {
   transform:translateY(26px) scale(1.09);
 
 }
+.home-banner .slide .video-slide {
+  background-color: #000; }
+  #home-banner-box > div {
+    position: absolute;
+    z-index: -2;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+}
+.home-banner.loading .video-background {
+  opacity: 0; }
+
+.video-background {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  padding-top: 56.25%;
+  width: 100%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  -webkit-transition: 2s opacity ease;
+  transition: 2s opacity ease;
+  opacity: 1;
+  z-index: -1;
+}
+
+.fullstackdiv {
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.322);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.video-foreground,
+.video-background iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; }
