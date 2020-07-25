@@ -31,12 +31,22 @@ let options = {
   rootMargin: '0px',
   threshold: .1
 }
-let observer = new IntersectionObserver(callback, options);
+async function loadPolyfills() {
+  if (typeof window.IntersectionObserver === 'undefined') {
+    await import('intersection-observer')
+  }
+  observer = new IntersectionObserver(callback, options);
+  
+}
+loadPolyfills();
+var observer;
+ 
 
 
 
 function Home() {
   useEffect(()=>{
+    
     const elements = [...document.querySelectorAll('.crip div'), ...document.querySelectorAll(".qfi")];
     elements.forEach((element) => {observer.observe(element)});
   }, [])
@@ -63,8 +73,8 @@ function Home() {
         <Aside className="about">
           <div className="laptop-pic">
             <picture>
-              <source data-srcset="./images/laptop.webp" type="image/webp"/>
-              <img className="lazyload qfi" data-src="./images/laptop.jpg"/>
+              <source data-srcset="/assets/images/laptop.webp" type="image/webp"/>
+              <img className="lazyload qfi" data-src="./assets/images/laptop.jpg"/>
             </picture>
           </div>
         </Aside>
@@ -95,8 +105,8 @@ function Home() {
           <div className="armspic">
             <div>
             <picture>
-              <source data-srcset="./images/armspic.webp" type="image/webp"/>
-              <img className="lazyload" data-src="./images/armspic.jpg"/>
+              <source data-srcset="./assets/images/armspic.webp" type="image/webp"/>
+              <img className="lazyload" data-src="./assets/images/armspic.jpg"/>
             </picture>
             </div>
           </div>
@@ -123,8 +133,8 @@ function Home() {
         <Aside className="crip">
         <div className="picberet">
         <picture>
-              <source data-srcset="./images/soldierpic.webp" type="image/webp"/>
-              <img className="lazyload" data-src="./images/soldierpic.jpg"/>
+              <source data-srcset="./assets/images/soldierpic.webp" type="image/webp"/>
+              <img className="lazyload" data-src="./assets/images/soldierpic.jpg"/>
             </picture>
         </div>
         </Aside>
@@ -167,26 +177,26 @@ function Home() {
             </SkillTitle>
             <SkillGrid>
               <picture>
-                <source data-srcset="./images/javascript.webp" type="image/webp"/>
-                <img className="lazyload qfi" data-src="./images/javascript.png"/>
+                <source data-srcset="./assets/images/javascript.webp" type="image/webp"/>
+                <img className="lazyload qfi" data-src="./assets/images/javascript.png"/>
               </picture>
               
               <picture>
-                <source data-srcset="./images/css.webp" type="image/webp"/>
-                <img className="lazyload qfi" data-src="./images/css.png"/>
+                <source data-srcset="./assets/images/css.webp" type="image/webp"/>
+                <img className="lazyload qfi" data-src="./assets/images/css.png"/>
               </picture>
               
               <picture>
-                <source data-srcset="./images/html.webp" type="image/webp"/>
-                <img className="lazyload qfi" data-src="./images/html.png"/>
+                <source data-srcset="./assets/images/html.webp" type="image/webp"/>
+                <img className="lazyload qfi" data-src="./assets/images/html.png"/>
               </picture>
               <picture>
-                <source data-srcset="./images/bootstrap.webp" type="image/webp"/>
-                <img className="lazyload qfi" data-src="./images/bootstrap.png"/>
+                <source data-srcset="./assets/images/bootstrap.webp" type="image/webp"/>
+                <img className="lazyload qfi" data-src="./assets/images/bootstrap.png"/>
               </picture>
               <picture>
-                <source data-srcset="./images/react.webp" type="image/webp"/>
-                <img className="lazyload qfi" data-src="./images/react.png"/>
+                <source data-srcset="./assets/images/react.webp" type="image/webp"/>
+                <img className="lazyload qfi" data-src="./assets/images/react.png"/>
               </picture>
             </SkillGrid>
           </SkillCategory>
@@ -196,24 +206,24 @@ function Home() {
             </SkillTitle>
             <SkillGrid>
             <picture>
-                <source data-srcset="./images/node.webp" type="image/webp"/>
-                <img className="lazyload qfi" data-src="./images/node.png"/>
+                <source data-srcset="./assets/images/node.webp" type="image/webp"/>
+                <img className="lazyload qfi" data-src="./assets/images/node.png"/>
               </picture>
               <picture>
-                <source data-srcset="./images/express.webp" type="image/webp"/>
-                <img className="lazyload qfi" data-src="./images/express.png"/>
+                <source data-srcset="./assets/images/express.webp" type="image/webp"/>
+                <img className="lazyload qfi" data-src="./assets/images/express.png"/>
               </picture>
               <picture>
-                <source data-srcset="./images/npm.webp" type="image/webp"/>
-                <img className="lazyload qfi" data-src="./images/npm.png"/>
+                <source data-srcset="./assets/images/npm.webp" type="image/webp"/>
+                <img className="lazyload qfi" data-src="./assets/images/npm.png"/>
               </picture>
               <picture>
-                <source data-srcset="./images/mongo.webp" type="image/webp"/>
-                <img className="lazyload qfi" data-src="./images/mongo.jpg"/>
+                <source data-srcset="./assets/images/mongo.webp" type="image/webp"/>
+                <img className="lazyload qfi" data-src="./assets/images/mongo.jpg"/>
               </picture>
               <picture>
-                <source data-srcset="./images/postgres.webp" type="image/webp"/>
-                <img className="lazyload qfi" data-src="./images/postgres.png"/>
+                <source data-srcset="./assets/images/postgres.webp" type="image/webp"/>
+                <img className="lazyload qfi" data-src="./assets/images/postgres.png"/>
               </picture>
             </SkillGrid>
           </SkillCategory>
@@ -223,23 +233,23 @@ function Home() {
             </SkillTitle>
             <SkillGrid>
             <picture>
-                <source data-srcset="./images/aws.webp" type="image/webp"/>
-                <img className="lazyload qfi" data-src="./images/aws.png"/>
+                <source data-srcset="./assets/images/aws.webp" type="image/webp"/>
+                <img className="lazyload qfi" data-src="./assets/images/aws.png"/>
               </picture>
               <picture>
-                <source data-srcset="./images/heroku.webp" type="image/webp"/>
-                <img className="lazyload qfi" data-src="./images/heroku.png"/>
+                <source data-srcset="./assets/images/heroku.webp" type="image/webp"/>
+                <img className="lazyload qfi" data-src="./assets/images/heroku.png"/>
               </picture>
               <picture>
-                <img className="lazyload qfi" data-src="./images/Nginx.svg"/>
+                <img className="lazyload qfi" data-src="./assets/images/Nginx.svg"/>
               </picture>
               <picture>
-                <source data-srcset="./images/jest.webp" type="image/webp"/>
-                <img className="lazyload qfi" data-src="./images/jest.jpg"/>
+                <source data-srcset="./assets/images/jest.webp" type="image/webp"/>
+                <img className="lazyload qfi" data-src="./assets/images/jest.jpg"/>
               </picture>
               <picture>
-                <source data-srcset="./images/docker.webp" type="image/webp"/>
-                <img className="lazyload qfi" data-src="./images/docker.png"/>
+                <source data-srcset="./assets/images/docker.webp" type="image/webp"/>
+                <img className="lazyload qfi" data-src="./assets/images/docker.png"/>
               </picture>
             </SkillGrid>
           </SkillCategory>
@@ -249,16 +259,16 @@ function Home() {
             </SkillTitle>
             <SkillGrid className="three">
             <picture>
-                <source data-srcset="./images/git.webp" type="image/webp"/>
-                <img className="lazyload qfi" data-src="./images/git.png"/>
+                <source data-srcset="./assets/images/git.webp" type="image/webp"/>
+                <img className="lazyload qfi" data-src="./assets/images/git.png"/>
               </picture>
               <picture>
-                <source data-srcset="./images/webpack.webp" type="image/webp"/>
-                <img className="lazyload qfi" data-src="./images/webpack.png"/>
+                <source data-srcset="./assets/images/webpack.webp" type="image/webp"/>
+                <img className="lazyload qfi" data-src="./assets/images/webpack.png"/>
               </picture>
               <picture>
-                <source data-srcset="./images/linux.webp" type="image/webp"/>
-                <img className="lazyload qfi" data-src="./images/linux.jpg"/>
+                <source data-srcset="./assets/images/linux.webp" type="image/webp"/>
+                <img className="lazyload qfi" data-src="./assets/images/linux.jpg"/>
               </picture>
             </SkillGrid>
           </SkillCategory>

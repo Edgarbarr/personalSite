@@ -8,7 +8,7 @@ const client = {
     path: path.resolve(__dirname, "./client/dist"),
     filename: "bundle.js",
     chunkFilename: "[name].bundle.js",
-    publicPath: "/",
+    publicPath: "/assets/",
   },
   node: {
     __dirname: false,
@@ -54,7 +54,8 @@ const client = {
       threshold: 10240,
       minRatio: 0.8,
     }),
-    new LoadablePlugin()
+    new LoadablePlugin(),
+    
     
   ],
 
@@ -67,6 +68,7 @@ const client = {
 const server = {
   entry: "./server/index.js",
   target: "node",
+
   output: {
     path: path.resolve(__dirname, "./server"),
     filename: "serverBundle.js",

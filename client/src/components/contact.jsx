@@ -47,7 +47,7 @@ function Contact() {
             <a href="https://www.linkedin.com/in/edgarbarrientos5">
               <img
                 className="social_media"
-                src="https://copyblogger.com/cdn-origin/images/linkedin.png"
+                src="/assets/https://copyblogger.com/cdn-origin/images/linkedin.png"
               />
             </a>
           </div>
@@ -55,7 +55,7 @@ function Contact() {
             <a href="https://www.facebook.com/edgar.barrientos.9">
               <img
                 className="social_media"
-                src="https://stpetersburggroup.com/wp-content/uploads/2018/05/Facebook-Logo-300x300.png"
+                src="/assets/https://stpetersburggroup.com/wp-content/uploads/2018/05/Facebook-Logo-300x300.png"
               />
             </a>
           </div>
@@ -63,7 +63,7 @@ function Contact() {
             <a href="https://github.com/Edgarbarr">
               <img
                 className="social_media border-radius"
-                src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"
+                src="/assets/https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"
               />
             </a>
           </div>

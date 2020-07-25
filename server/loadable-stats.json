@@ -6,7 +6,7 @@
   ],
   "version": "4.42.1",
   "hash": "f003017291309d80cd67",
-  "publicPath": "",
+  "publicPath": "/assets",
   "outputPath": "/Users/edgarbarrientos/personalSite/server",
   "assetsByChunkName": {
     "main": "serverBundle.js"

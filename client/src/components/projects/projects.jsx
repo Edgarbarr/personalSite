@@ -62,7 +62,7 @@ function Projects() {
           <ContentContainer>
             <img
               className="media hohimage"
-              src="hoh.png"
+              src="/assets/hoh.png"
               alt="Haven of Happiness frontpage snapshot"
             />
             <Description>
@@ -95,7 +95,7 @@ function Projects() {
               muted
               playsInline
             >
-              <source src="Trafalgar.mp4" type="video/mp4" />
+              <source src="/assets/Trafalgar.mp4" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
             <Description>
@@ -119,7 +119,7 @@ function Projects() {
               muted
               playsInline
             >
-              <source src="trivia.mp4" type="video/mp4" />
+              <source src="/assets/trivia.mp4" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
             <Description>
@@ -145,7 +145,7 @@ function Projects() {
               muted
               playsInline
             >
-              <source src="systemdesign.mp4" type="video/mp4" />
+              <source src="/assets/systemdesign.mp4" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
             <Description>

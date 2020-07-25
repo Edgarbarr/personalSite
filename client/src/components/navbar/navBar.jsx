@@ -49,7 +49,7 @@ var collapseHandler = () => {
   }
       return (
         <Nav id="nav">
-            <Link to="/"><img id="logo" className="logo" src="/logo.png" alt="EB Logo"/></Link><h5 id="job-title">Full Stack Developer</h5>
+            <Link to="/"><img id="logo" className="logo" src="/assets/logo.png" alt="EB Logo"/></Link><h5 id="job-title">Full Stack Developer</h5>
             <div className="x">
                 <ul id="nav-list" onClick={clickHandler}>
                     <Link to="/"><li>Home</li></Link>

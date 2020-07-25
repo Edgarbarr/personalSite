@@ -66,23 +66,26 @@ app.post('/api/form', (req, res) => {
 });
 app.listen(port, ()=>{console.log(`Now listening on port: ${port}`)});
 
-app.use(expressStaticGzip(path.join(__dirname, '../client/dist'),{
+
+const statsFile = path.resolve(__dirname,'../client/dist/loadable-stats.json')
+const extractor = new ChunkExtractor({ statsFile,publicPath: '/assets' },
+    );
+app.use("/assets",expressStaticGzip(path.join(__dirname, '../client/dist'),{
     enableBrotli: true,
     orderPreference: ['br']
 }));
-const statsFile = path.resolve(__dirname,'../client/dist/loadable-stats.json')
-const extractor = new ChunkExtractor({ statsFile });
-
 const jsx = extractor.collectChunks(<App />)
 app.use('/*', (req, res, next) => {
-
-    let context = {};
-    fs.readFile(path.resolve('server/index.html'), 'utf-8', (err, data) =>{
-        if(err){
-            return res.status(500).send("error");
-        }
-    return res.send(data.replace('<div id="app"></div>', `<div id="app">${renderToString(<Router location={`${req.originalUrl}`} context={context}>${jsx}</Router>)}</div>`))
-    })
+    const validRoutes = ["/projects", "/resume", "/contact", "/"].includes(req.originalUrl);
+    if(validRoutes) {
+        let context = {};
+        fs.readFile(path.resolve('server/index.html'), 'utf-8', (err, data) =>{
+            if(err){
+                return res.status(500).send("error");
+            }
+        return res.send(data.replace('<div id="app"></div>', `<div id="app">${renderToString(<Router location={`${req.originalUrl}`} context={context}>{jsx}</Router>)}</div>`))
+        })
+    }
 })
 
 // const scriptTags = extractor.getScriptTags() ;
