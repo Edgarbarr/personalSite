@@ -4,7 +4,7 @@
     "configuration\nThe 'mode' option has not been set, webpack will fallback to 'production' for this value. Set 'mode' option to 'development' or 'production' to enable defaults for each environment.\nYou can also set it to 'none' to disable any default behavior. Learn more: https://webpack.js.org/configuration/mode/"
   ],
   "version": "4.42.1",
-  "hash": "bb99f9e70899587819a3",
+  "hash": "b194bdc3529638c3e796",
   "publicPath": "/assets/",
   "outputPath": "/Users/edgarbarrientos/personalSite/client/dist",
   "assetsByChunkName": {
@@ -20,7 +20,7 @@
   "assets": [
     {
       "name": "8.bundle.js",
-      "size": 9086,
+      "size": 8819,
       "chunks": [
         8
       ],
@@ -30,7 +30,7 @@
     },
     {
       "name": "bundle.js",
-      "size": 206151,
+      "size": 203949,
       "chunks": [
         3
       ],
@@ -42,7 +42,7 @@
     },
     {
       "name": "bundle.js.br",
-      "size": 56797,
+      "size": 56575,
       "chunks": [],
       "chunkNames": [],
       "info": {},
@@ -50,7 +50,7 @@
     },
     {
       "name": "bundle.js.gz",
-      "size": 65110,
+      "size": 64863,
       "chunks": [],
       "chunkNames": [],
       "info": {},
@@ -58,7 +58,7 @@
     },
     {
       "name": "contact-jsx.bundle.js",
-      "size": 3984,
+      "size": 3983,
       "chunks": [
         0
       ],
@@ -82,7 +82,7 @@
     },
     {
       "name": "home-home-jsx.bundle.js",
-      "size": 19184,
+      "size": 19614,
       "chunks": [
         2
       ],
@@ -94,7 +94,7 @@
     },
     {
       "name": "home-home-jsx.bundle.js.br",
-      "size": 3147,
+      "size": 3272,
       "chunks": [],
       "chunkNames": [],
       "info": {},
@@ -102,7 +102,7 @@
     },
     {
       "name": "home-home-jsx.bundle.js.gz",
-      "size": 3728,
+      "size": 3860,
       "chunks": [],
       "chunkNames": [],
       "info": {},
@@ -134,7 +134,7 @@
     },
     {
       "name": "vendors~contact-jsx.bundle.js",
-      "size": 14481,
+      "size": 14267,
       "chunks": [
         6
       ],
@@ -146,7 +146,7 @@
     },
     {
       "name": "vendors~contact-jsx.bundle.js.br",
-      "size": 4333,
+      "size": 4286,
       "chunks": [],
       "chunkNames": [],
       "info": {},
@@ -154,7 +154,7 @@
     },
     {
       "name": "vendors~contact-jsx.bundle.js.gz",
-      "size": 4856,
+      "size": 4803,
       "chunks": [],
       "chunkNames": [],
       "info": {},
@@ -162,7 +162,7 @@
     },
     {
       "name": "vendors~home-home-jsx.bundle.js",
-      "size": 594073,
+      "size": 589131,
       "chunks": [
         7
       ],
@@ -174,7 +174,7 @@
     },
     {
       "name": "vendors~home-home-jsx.bundle.js.br",
-      "size": 166967,
+      "size": 166419,
       "chunks": [],
       "chunkNames": [],
       "info": {},
@@ -182,7 +182,7 @@
     },
     {
       "name": "vendors~home-home-jsx.bundle.js.gz",
-      "size": 236053,
+      "size": 235365,
       "chunks": [],
       "chunkNames": [],
       "info": {},

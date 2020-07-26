@@ -26,6 +26,11 @@ app.use(bodyparser.urlencoded({extended: true}))
 //     res.set('Content-Encoding', 'brotli');
 //     next();
 //   });
+app.use('/robots.txt', function (req, res, next) {
+    res.type('text/plain')
+    res.send("User-agent: *\nDisallow: ");
+    next();
+});
 app.post('/api/form', (req, res) => {
     nodemailer.createTestAccount((err, account) => {
         const htmlEmail = `

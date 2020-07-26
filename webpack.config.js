@@ -18,6 +18,7 @@ const client = {
       {
         test: /\.(js|jsx|mp4)$/,
         loader: "babel-loader",
+        exclude: /node_modules/,
         options: {
           presets: ["@babel/preset-env", "@babel/preset-react"],
           plugins: ["@babel/plugin-syntax-dynamic-import", ],
@@ -25,6 +26,7 @@ const client = {
       },
       {
         test: /\.css$/,
+        exclude: /node_modules/,
         use: [
           'isomorphic-style-loader',
           {
@@ -81,6 +83,7 @@ const server = {
       {
         test: /\.(js|jsx|mp4)$/,
         loader: "babel-loader",
+        exclude: /node_modules/,
         options: {
           presets: ["@babel/preset-env", "@babel/preset-react"],
           plugins: ["@babel/plugin-syntax-dynamic-import", "@loadable/babel-plugin"],
@@ -88,6 +91,7 @@ const server = {
       },
       {
         test: /\.css$/,
+        exclude: /node_modules/,
         use: [
           'isomorphic-style-loader',
           {
