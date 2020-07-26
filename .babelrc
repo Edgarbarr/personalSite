@@ -7,11 +7,10 @@
       "styled-components",
       {
         "ssr": true,
-        "minify": false,
+        "minify": true,
         "displayName": false,
-        "fileName": false,
-        "pure": true,
-        "transpileTemplateLiterals": false
+        "fileName": false
+
       }
     ]]
 }
