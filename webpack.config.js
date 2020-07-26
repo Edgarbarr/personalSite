@@ -4,6 +4,13 @@ const webpack = require("webpack")
 const LoadablePlugin = require('@loadable/webpack-plugin')
 const client = {
   entry: "./client/src/index.jsx",
+  externals: {
+         "styled-components": {
+           commonjs: "styled-components",
+           commonjs2: "styled-components",
+           amd: "styled-components",
+         },
+       },
   output: {
     path: path.resolve(__dirname, "./client/dist"),
     filename: "bundle.js",
