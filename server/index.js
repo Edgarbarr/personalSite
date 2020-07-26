@@ -12,7 +12,7 @@ import React from 'react';
 import ReactDOMServer, {renderToString} from 'react-dom/server';
 import App from '../client/src/components/app.jsx';
 import { ChunkExtractor } from '@loadable/server';
-
+import { ServerStyleSheet, StyleSheetManager } from 'styled-components'
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 import rootReducer from '../client/src/redux/root-reducer.js';
@@ -77,13 +77,24 @@ app.listen(port, ()=>{console.log(`Now listening on port: ${port}`)});
 
 
 const statsFile = path.resolve(__dirname,'../client/dist/loadable-stats.json')
-const extractor = new ChunkExtractor({ statsFile,publicPath: '/assets' },
-    );
+const extractor = new ChunkExtractor({ statsFile,publicPath: '/assets' });
 
-const jsx = extractor.collectChunks(<App />)
 app.use('/*', (req, res, next) => {
+
+
     const validRoutes = ["/projects", "/resume", "/contact", "/"].includes(req.originalUrl);
+
     if(validRoutes) {
+        const sheet = new ServerStyleSheet()
+
+        sheet.collectStyles(<App />)
+const jsx = extractor.collectChunks(<App />)
+
+const body = renderToString(<StyleSheetManager sheet={sheet.instance}><Provider store={store}><Router location={req.originalUrl} context={context}>{jsx}</Router></Provider></StyleSheetManager>)
+const styleTags = sheet.getStyleTags() // or sheet.getStyleElement();
+sheet.seal();
+
+
         let context = {};
         fs.readFile(path.resolve('server/index.html'), 'utf-8', (err, data) =>{
             if(err){
@@ -99,15 +110,20 @@ app.use('/*', (req, res, next) => {
                 </body>
                 </html>`);
             } 
-        return res.send(data.replace('<div id="app"></div>', `<div id="app">${renderToString(<Provider store={store}><Router location={req.originalUrl} context={context}>{jsx}</Router></Provider>)}</div>
-        <script>
-          // WARNING: See the following for security issues around embedding JSON in HTML:
-          // https://redux.js.org/recipes/server-rendering/#security-considerations
-          window.__PRELOADED_STATE__ = ${JSON.stringify(preloadedState).replace(
-            /</g,
-            '\\u003c'
-          )}
-        </script>`))
+            var appResponse= data.replace(`<title>EdgarBarrientos.com</title>`, `
+            ${styleTags}
+            <title>EdgarBarrientos.com</title>`);
+            
+            appResponse = appResponse.replace('<div id="app"></div>', `<div id="app">${body}</div>
+            <script>
+              // WARNING: See the following for security issues around embedding JSON in HTML:
+              // https://redux.js.org/recipes/server-rendering/#security-considerations
+              window.__PRELOADED_STATE__ = ${JSON.stringify(preloadedState).replace(
+                /</g,
+                '\\u003c'
+              )}
+            </script>`)
+         return res.send(appResponse)
         })
     } else {
         return res.status(404).send(`<!DOCTYPE html>
