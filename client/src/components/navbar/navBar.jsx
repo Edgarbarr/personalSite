@@ -12,20 +12,20 @@ function NavBar(){
     
     function scrollFunction() {
   if (document.body.scrollTop > 150 || document.documentElement.scrollTop > 150) {
-    document.getElementById("nav").style.setProperty('height', '100px');
+    document.getElementById("nav").style.setProperty('height', '100px', "important");
     document.getElementById("nav").style.setProperty('flex-direction', 'row', 'important');
-    document.getElementById("nav").style.setProperty('padding', '0 10px');
-    document.getElementById("logo").style.setProperty('height', '50px');
-    document.getElementById("logo").style.setProperty('width', '50px');
-    document.getElementById("nav-list").style.setProperty('top', '100px');
+    document.getElementById("nav").style.setProperty('padding', '0 10px',"important");
+    document.getElementById("logo").style.setProperty('height', '50px',"important");
+    document.getElementById("logo").style.setProperty('width', '50px',"important");
+    document.getElementById("nav-list").style.setProperty('top', '100px',"important");
 
   } else {
-    document.getElementById("nav").style.setProperty('height', '210px');
-    document.getElementById("nav").style.setProperty('flex-direction', 'column');
-    document.getElementById("nav").style.setProperty('padding', '0');
-    document.getElementById("nav-list").style.setProperty('top', '210px');
-    document.getElementById("logo").style.setProperty('height', '100px');
-    document.getElementById("logo").style.setProperty('width', '100px');
+    document.getElementById("nav").style.setProperty('height', '210px',"important");
+    document.getElementById("nav").style.setProperty('flex-direction', 'column',"important");
+    document.getElementById("nav").style.setProperty('padding', '0',"important");
+    document.getElementById("nav-list").style.setProperty('top', '210px',"important");
+    document.getElementById("logo").style.setProperty('height', '100px',"important");
+    document.getElementById("logo").style.setProperty('width', '100px',"important");
 
   }
 
@@ -34,17 +34,17 @@ function NavBar(){
 var collapseHandler = () => {
     
     if(!open){
-        document.getElementById("nav-list").style.setProperty('width', '80%');
+        document.getElementById("nav-list").style.setProperty('width', '80%',"important");
         open= true;
     }  else if(open){
-        document.getElementById("nav-list").style.setProperty('width', '0%');
+        document.getElementById("nav-list").style.setProperty('width', '0%',"important");
         open = false;
     }
   }
   const clickHandler = () => {
       if(window.innerWidth <= 768){
           open = false;
-          document.getElementById("nav-list").style.setProperty('width', '0%');
+          document.getElementById("nav-list").style.setProperty('width', '0%',"important");
       }
   }
       return (

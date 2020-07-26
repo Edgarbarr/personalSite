@@ -4,10 +4,14 @@
         "regenerator": true
       }
     ],[
-      "babel-plugin-styled-components",
+      "styled-components",
       {
         "ssr": true,
-        "minify": true
+        "minify": false,
+        "displayName": false,
+        "fileName": false,
+        "pure": true,
+        "transpileTemplateLiterals": false
       }
     ]]
 }

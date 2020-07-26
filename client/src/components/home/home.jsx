@@ -36,9 +36,11 @@ async function loadPolyfills() {
     await import('intersection-observer')
   }
   observer = new IntersectionObserver(callback, options);
-  
+  const elements = [...document.querySelectorAll('.crip div'), ...document.querySelectorAll(".qfi")];
+  console.log(elements, "elements")
+    elements.forEach((element) => {observer.observe(element)});
 }
-loadPolyfills();
+
 var observer;
  
 
@@ -46,9 +48,9 @@ var observer;
 
 function Home() {
   useEffect(()=>{
+    loadPolyfills();
+    console.log("hello")
     
-    const elements = [...document.querySelectorAll('.crip div'), ...document.querySelectorAll(".qfi")];
-    elements.forEach((element) => {observer.observe(element)});
   }, [])
 
   scrollToTop();

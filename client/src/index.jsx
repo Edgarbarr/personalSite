@@ -6,6 +6,7 @@ import { loadableReady } from '@loadable/component'
 import rootReducer from "./redux/root-reducer.js";
 import {createStore} from "redux";
 import {Provider} from "react-redux";
+import {StyleSheetManager} from "styled-components";
 // Grab the state from a global variable injected into the server-generated HTML
 const preloadedState = window.__PRELOADED_STATE__
 
@@ -17,5 +18,5 @@ const store = createStore(rootReducer, preloadedState)
 
 
 loadableReady(() => {
-    ReactDOM.hydrate(<Provider store={store}><Router><App/></Router></Provider>, document.getElementById('app'));
+    ReactDOM.hydrate(<StyleSheetManager><Provider store={store}><Router><App/></Router></Provider></StyleSheetManager>, document.getElementById('app'));
 })

@@ -4,13 +4,7 @@ const webpack = require("webpack")
 const LoadablePlugin = require('@loadable/webpack-plugin')
 const client = {
   entry: "./client/src/index.jsx",
-  externals: {
-         "styled-components": {
-           commonjs: "styled-components",
-           commonjs2: "styled-components",
-           amd: "styled-components",
-         },
-       },
+  
   output: {
     path: path.resolve(__dirname, "./client/dist"),
     filename: "bundle.js",
@@ -20,6 +14,7 @@ const client = {
   node: {
     __dirname: false,
   },
+  
   module: {
     rules: [
       {
@@ -47,6 +42,8 @@ const client = {
       }
 
     ],
+    
+    
   },
   plugins: [
     new BrotliGzipPlugin({
@@ -64,7 +61,8 @@ const client = {
       minRatio: 0.8,
     }),
     new LoadablePlugin(),
-    new webpack.IgnorePlugin(/^pg-native$/)
+    new webpack.IgnorePlugin(/^pg-native$/),
+    
  
     
     
@@ -84,6 +82,7 @@ const server = {
     path: path.resolve(__dirname, "./server"),
     filename: "serverBundle.js",
   },
+  
   node: {
     __dirname: false,
   },
