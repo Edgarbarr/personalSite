@@ -4,6 +4,7 @@ const path = require('path');
 const port = 3002;
 const bodyparser = require('body-parser');
 const nodemailer = require('nodemailer');
+const router = require("./routes.js");
 var expressStaticGzip = require("express-static-gzip")
 import {StaticRouter as Router} from "react-router-dom";
 import fs from 'fs';
@@ -12,25 +13,24 @@ import ReactDOMServer, {renderToString} from 'react-dom/server';
 import App from '../client/src/components/app.jsx';
 import { ChunkExtractor } from '@loadable/server';
 
+import { createStore } from 'redux';
+import { Provider } from 'react-redux';
+import rootReducer from '../client/src/redux/root-reducer.js';
+const store = createStore(rootReducer);
+
+const preloadedState = store.getState()
 
 app.use(bodyparser.json());
 app.use(bodyparser.urlencoded({extended: true}))
 
-//   app.get('*.html', function (req, res, next) {
-//     req.url = req.url + '.br';
-//     res.set('Content-Encoding', 'brotli');
-//     next();
-//   });
-//   app.get('*.', function (req, res, next) {
-//     req.url = req.url + '.br';
-//     res.set('Content-Encoding', 'brotli');
-//     next();
-//   });
 app.use('/robots.txt', function (req, res, next) {
     res.type('text/plain')
     res.send("User-agent: *\nDisallow: ");
     next();
 });
+
+
+app.use("/api/users", router)
 app.post('/api/form', (req, res) => {
     nodemailer.createTestAccount((err, account) => {
         const htmlEmail = `
@@ -86,16 +86,46 @@ app.use('/*', (req, res, next) => {
         let context = {};
         fs.readFile(path.resolve('server/index.html'), 'utf-8', (err, data) =>{
             if(err){
-                return res.status(500).send("error");
-            }
-        return res.send(data.replace('<div id="app"></div>', `<div id="app">${renderToString(<Router location={`${req.originalUrl}`} context={context}>{jsx}</Router>)}</div>`))
+                return res.status(500).send(`<!DOCTYPE html>
+                <html lang="en">
+                <head>
+                    <meta charset="UTF-8">
+                    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                    <title>EdgarBarrientos.com</title>
+                </head>
+                <body>  
+                    <div id="app"><h1>Page Not Found: 404</h1></div>  
+                </body>
+                </html>`);
+            } 
+        return res.send(data.replace('<div id="app"></div>', `<div id="app">${renderToString(<Provider store={store}><Router location={req.originalUrl} context={context}>{jsx}</Router></Provider>)}</div>
+        <script>
+          // WARNING: See the following for security issues around embedding JSON in HTML:
+          // https://redux.js.org/recipes/server-rendering/#security-considerations
+          window.__PRELOADED_STATE__ = ${JSON.stringify(preloadedState).replace(
+            /</g,
+            '\\u003c'
+          )}
+        </script>`))
         })
+    } else {
+        return res.status(404).send(`<!DOCTYPE html>
+                <html lang="en">
+                <head>
+                    <meta charset="UTF-8">
+                    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                    <title>EdgarBarrientos.com</title>
+                </head>
+                <body>  
+                    <div id="app"><h1>Page Not Found: 404</h1></div>  
+                </body>
+                </html>`);
     }
 })
 
-// const scriptTags = extractor.getScriptTags() ;
-// const linkTags = extractor.getLinkTags();
-// const styleTags = extractor.getStyleTags()
+const scriptTags = extractor.getScriptTags() ;
+const linkTags = extractor.getLinkTags();
+const styleTags = extractor.getStyleTags()
 
 
 

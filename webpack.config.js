@@ -1,6 +1,6 @@
 const path = require("path");
 var BrotliGzipPlugin = require("brotli-gzip-webpack-plugin");
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const webpack = require("webpack")
 const LoadablePlugin = require('@loadable/webpack-plugin')
 const client = {
   entry: "./client/src/index.jsx",
@@ -57,6 +57,8 @@ const client = {
       minRatio: 0.8,
     }),
     new LoadablePlugin(),
+    new webpack.IgnorePlugin(/^pg-native$/)
+ 
     
     
   ],
@@ -122,6 +124,7 @@ const server = {
       threshold: 10240,
       minRatio: 0.8,
     }),
+    new webpack.IgnorePlugin(/^pg-native$/)
     
   ],
 

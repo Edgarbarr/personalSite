@@ -181,11 +181,9 @@ display: -webkit-flex;
         left: -5%;
         
         img{
-            width: auto;
-            height: 100%;
-                height: -moz-available;          
-                height: -webkit-fill-available; 
-                height: fill-available;
+            width: 40vw;
+            height: auto;
+                z-index: 5;
             box-shadow: 3px 3px 5px 5px rgba(75, 75, 75, 0.486);
         }
     }
@@ -310,7 +308,7 @@ align-items: center;
         content:'';
         position: absolute;
         opacity: 1;
-        background: url("/assets/fullstackdev.jpg") no-repeat center center;
+        background: url("/assets/images/fullstackdev.jpg") no-repeat center center;
         -webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;

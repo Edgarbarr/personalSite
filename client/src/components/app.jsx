@@ -8,6 +8,7 @@ import Spinner from "./with-spinner/with-spinner.component.jsx";
 // import Contact from "./contact.jsx";
 // import Footer from "./footer/footer.jsx";
 import loadable from '@loadable/component'
+import {useSelector} from "react-redux";
 
 const Projects = loadable(() => import("./projects/projects.jsx"), {
   fallback: <Spinner/>
@@ -29,6 +30,9 @@ const Footer = loadable(() => import("./footer/footer.jsx"), {
 
 function App() {
   var [loading, setLoading] = useState(false);
+  const user = useSelector(state=> state);
+  console.log(user);
+
   useEffect(() => {
   },[Projects, Resume, Contact, Home])
   return (
