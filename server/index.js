@@ -29,6 +29,10 @@ app.use('/robots.txt', function (req, res, next) {
     next();
 });
 
+app.use("/assets",expressStaticGzip(path.join(__dirname, '../client/dist'),{
+    enableBrotli: true,
+    orderPreference: ['br']
+}));
 
 app.use("/api/users", router)
 app.post('/api/form', (req, res) => {
@@ -75,10 +79,7 @@ app.listen(port, ()=>{console.log(`Now listening on port: ${port}`)});
 const statsFile = path.resolve(__dirname,'../client/dist/loadable-stats.json')
 const extractor = new ChunkExtractor({ statsFile,publicPath: '/assets' },
     );
-app.use("/assets",expressStaticGzip(path.join(__dirname, '../client/dist'),{
-    enableBrotli: true,
-    orderPreference: ['br']
-}));
+
 const jsx = extractor.collectChunks(<App />)
 app.use('/*', (req, res, next) => {
     const validRoutes = ["/projects", "/resume", "/contact", "/"].includes(req.originalUrl);
