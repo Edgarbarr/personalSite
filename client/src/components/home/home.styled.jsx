@@ -308,7 +308,7 @@ align-items: center;
         content:'';
         position: absolute;
         opacity: 1;
-        background: url("/assets/images/fullstackdev.jpg") no-repeat center center;
+        background: url("/assets/fullstackdev.jpg") no-repeat center center;
         -webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;
