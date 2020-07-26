@@ -12,7 +12,7 @@ function Resume() {
         <div className="row" style={{ height: "600px" }}>
           <object
             type="application/pdf"
-            data="embresume.pdf"
+            data="/assets/embresume.pdf"
             width="100%"
             height="100%"
           ></object>
