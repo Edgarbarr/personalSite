@@ -28,7 +28,7 @@ let callback = (entries) => {
 }
 let options = {
   root: null,
-  rootMargin: '0px',
+  rootMargin: '40px',
   threshold: .1
 }
 async function loadPolyfills() {
@@ -49,7 +49,6 @@ var observer;
 function Home() {
   useEffect(()=>{
     loadPolyfills();
-    console.log("hello")
     
   }, [])
 
