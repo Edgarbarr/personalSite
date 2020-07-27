@@ -1,4 +1,5 @@
-import {createGlobalStyle} from "styled-components";
+import { createGlobalStyle } from 'styled-components';
+
 const GlobalStyle = createGlobalStyle`
 .soItBegins {
     overflow: hidden; 
@@ -534,5 +535,5 @@ const GlobalStyle = createGlobalStyle`
     width: 100%;
     height: 100%;
     pointer-events: none; }
-`
+`;
 export default GlobalStyle;

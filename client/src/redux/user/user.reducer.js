@@ -1,6 +1,6 @@
-import UserActionTypes from "./user.types.js";
+import UserActionTypes from './user.types.js';
 
-const userReducer = (state = {currentUser: "guest"}, action) => {
+const userReducer = (state = { currentUser: 'guest' }, action) => {
   switch (action) {
     case UserActionTypes.SET_CURRENT_USER:
       return {

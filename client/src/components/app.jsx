@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from "react";
-import { Switch, Route } from "react-router-dom";
+import { Switch, Route, useParams } from "react-router-dom";
 import NavBar from "./navbar/navBar.jsx";
 import Spinner from "./with-spinner/with-spinner.component.jsx";
 import Home from "./home/home.jsx";
@@ -8,6 +8,7 @@ import Resume from "./resume.jsx";
 import Contact from "./contact.jsx";
 import Footer from "./footer/footer.jsx";
 import loadable from '@loadable/component'
+
 // import {useSelector} from "react-redux";
 
 // const Projects = loadable(() => import("./projects/projects.jsx"), {
@@ -35,13 +36,9 @@ import loadable from '@loadable/component'
 
 
 function App() {
-  var [loading, setLoading] = useState(false);
   // const user = useSelector(state=> state);
   // console.log(user);
 
-  useEffect(() => {
-    console.log(document.URL)
-  },[Projects, Resume, Contact, Home])
   return (
     <div className="soItBegins">
       <NavBar />
