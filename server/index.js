@@ -16,6 +16,7 @@ import { ServerStyleSheet, StyleSheetManager } from 'styled-components'
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 import rootReducer from '../client/src/redux/root-reducer.js';
+import GlobalStyle from "./globalstyles.js";
 const store = createStore(rootReducer);
 
 const preloadedState = store.getState()
@@ -90,7 +91,7 @@ app.use('/*', (req, res, next) => {
         sheet.collectStyles(<App />)
 const jsx = extractor.collectChunks(<App />)
 
-const body = renderToString(<StyleSheetManager sheet={sheet.instance}><Provider store={store}><Router location={req.originalUrl} context={context}>{jsx}</Router></Provider></StyleSheetManager>)
+const body = renderToString(<StyleSheetManager sheet={sheet.instance}><GlobalStyle/><Provider store={store}><Router location={req.originalUrl} context={context}>{jsx}</Router></Provider></StyleSheetManager>)
 const styleTags = sheet.getStyleTags() // or sheet.getStyleElement();
 sheet.seal();
 

@@ -11,20 +11,25 @@ import loadable from '@loadable/component'
 // import {useSelector} from "react-redux";
 
 // const Projects = loadable(() => import("./projects/projects.jsx"), {
-//   fallback: <Spinner/>
+//   fallback: <Spinner/>,
+
 // });
 // const Resume = loadable(() => import("./resume.jsx"), {
-//   fallback: <Spinner/>
+//   fallback: <Spinner/>,
+
 // });
 // const Contact = loadable(() => import("./contact.jsx"), {
-//   fallback: <Spinner/>
+//   fallback: <Spinner/>,
+
 // });
 
 // const Home = loadable(() => import("./home/home.jsx"), {
-//   fallback: <Spinner/>
+//   fallback: <Spinner/>,
+
 // });
 // const Footer = loadable(() => import("./footer/footer.jsx"), {
-//   fallback: <Spinner/>
+//   fallback: <Spinner/>,
+
 // });
 
 
@@ -35,6 +40,7 @@ function App() {
   // console.log(user);
 
   useEffect(() => {
+    console.log(document.URL)
   },[Projects, Resume, Contact, Home])
   return (
     <div className="soItBegins">
