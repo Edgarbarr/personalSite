@@ -118,6 +118,7 @@ app.use('/*', (req, res, next) => {
             <title>EdgarBarrientos.com</title>`);
 
       appResponse = appResponse.replace('<div id="app"></div>', `<div id="app">${body}</div>
+      ${extractor.getScriptTags()}
             <script>
               // WARNING: See the following for security issues around embedding JSON in HTML:
               // https://redux.js.org/recipes/server-rendering/#security-considerations

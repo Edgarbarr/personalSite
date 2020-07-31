@@ -1,37 +1,45 @@
 import React, {useEffect, useState} from "react";
 import { Switch, Route, useParams } from "react-router-dom";
-import NavBar from "./navbar/navBar.jsx";
+// import NavBar from "./navbar/navBar.jsx";
 import Spinner from "./with-spinner/with-spinner.component.jsx";
-import Home from "./home/home.jsx";
-import Projects from "./projects/projects.jsx";
-import Resume from "./resume.jsx";
-import Contact from "./contact.jsx";
-import Footer from "./footer/footer.jsx";
+// import Home from "./home/home.jsx";
+// import Projects from "./projects/projects.jsx";
+// import Resume from "./resume.jsx";
+// import Contact from "./contact.jsx";
+// import Footer from "./footer/footer.jsx";
 import loadable from '@loadable/component'
 
 // import {useSelector} from "react-redux";
+const NavBar = loadable(() => import("./navbar/navBar.jsx"), {
+  fallback: <Spinner/>,
+  ssr: true
 
-// const Projects = loadable(() => import("./projects/projects.jsx"), {
-//   fallback: <Spinner/>,
+});
+const Projects = loadable(() => import("./projects/projects.jsx"), {
+  fallback: <Spinner/>,
+  ssr: true
 
-// });
-// const Resume = loadable(() => import("./resume.jsx"), {
-//   fallback: <Spinner/>,
+});
+const Resume = loadable(() => import("./resume.jsx"), {
+  fallback: <Spinner/>,
+  ssr: true
 
-// });
-// const Contact = loadable(() => import("./contact.jsx"), {
-//   fallback: <Spinner/>,
+});
+const Contact = loadable(() => import("./contact.jsx"), {
+  fallback: <Spinner/>,
+  ssr: true
 
-// });
+});
+const Home = loadable(() => import("./home/home.jsx"), {
+  fallback: <Spinner/>,
+  ssr: true
 
-// const Home = loadable(() => import("./home/home.jsx"), {
-//   fallback: <Spinner/>,
+});
+const Footer = loadable(() => import("./footer/footer.jsx"), {
+  fallback: <Spinner/>,
+  ssr: true
 
-// });
-// const Footer = loadable(() => import("./footer/footer.jsx"), {
-//   fallback: <Spinner/>,
-
-// });
+});
 
 
 

@@ -4,18 +4,26 @@
     "configuration\nThe 'mode' option has not been set, webpack will fallback to 'production' for this value. Set 'mode' option to 'development' or 'production' to enable defaults for each environment.\nYou can also set it to 'none' to disable any default behavior. Learn more: https://webpack.js.org/configuration/mode/"
   ],
   "version": "4.44.0",
-  "hash": "688975117ef6126f1841",
+  "hash": "50e0391719c02573ed0b",
   "publicPath": "/assets/",
   "outputPath": "/Users/edgarbarrientos/personalSite/client/dist",
   "assetsByChunkName": {
-    "main": "bundle.js"
+    "contact-jsx": "contact-jsx.bundle.js",
+    "footer-footer-jsx": "footer-footer-jsx.bundle.js",
+    "home-home-jsx": "home-home-jsx.bundle.js",
+    "main": "bundle.js",
+    "navbar-navBar-jsx": "navbar-navBar-jsx.bundle.js",
+    "projects-projects-jsx": "projects-projects-jsx.bundle.js",
+    "resume-jsx": "resume-jsx.bundle.js",
+    "vendors~contact-jsx": "vendors~contact-jsx.bundle.js",
+    "vendors~home-home-jsx": "vendors~home-home-jsx.bundle.js"
   },
   "assets": [
     {
-      "name": "1.bundle.js",
+      "name": "9.bundle.js",
       "size": 8818,
       "chunks": [
-        1
+        9
       ],
       "chunkNames": [],
       "info": {},
@@ -23,9 +31,9 @@
     },
     {
       "name": "bundle.js",
-      "size": 273107,
+      "size": 218354,
       "chunks": [
-        0
+        3
       ],
       "chunkNames": [
         "main"
@@ -35,7 +43,7 @@
     },
     {
       "name": "bundle.js.br",
-      "size": 73481,
+      "size": 59734,
       "chunks": [],
       "chunkNames": [],
       "info": {},
@@ -43,7 +51,151 @@
     },
     {
       "name": "bundle.js.gz",
-      "size": 84922,
+      "size": 68555,
+      "chunks": [],
+      "chunkNames": [],
+      "info": {},
+      "emitted": false
+    },
+    {
+      "name": "contact-jsx.bundle.js",
+      "size": 3473,
+      "chunks": [
+        0
+      ],
+      "chunkNames": [
+        "contact-jsx"
+      ],
+      "info": {},
+      "emitted": false
+    },
+    {
+      "name": "footer-footer-jsx.bundle.js",
+      "size": 606,
+      "chunks": [
+        1
+      ],
+      "chunkNames": [
+        "footer-footer-jsx"
+      ],
+      "info": {},
+      "emitted": false
+    },
+    {
+      "name": "home-home-jsx.bundle.js",
+      "size": 15540,
+      "chunks": [
+        2
+      ],
+      "chunkNames": [
+        "home-home-jsx"
+      ],
+      "info": {},
+      "emitted": false
+    },
+    {
+      "name": "home-home-jsx.bundle.js.br",
+      "size": 2914,
+      "chunks": [],
+      "chunkNames": [],
+      "info": {},
+      "emitted": false
+    },
+    {
+      "name": "home-home-jsx.bundle.js.gz",
+      "size": 3473,
+      "chunks": [],
+      "chunkNames": [],
+      "info": {},
+      "emitted": false
+    },
+    {
+      "name": "navbar-navBar-jsx.bundle.js",
+      "size": 4184,
+      "chunks": [
+        4
+      ],
+      "chunkNames": [
+        "navbar-navBar-jsx"
+      ],
+      "info": {},
+      "emitted": false
+    },
+    {
+      "name": "projects-projects-jsx.bundle.js",
+      "size": 6656,
+      "chunks": [
+        5
+      ],
+      "chunkNames": [
+        "projects-projects-jsx"
+      ],
+      "info": {},
+      "emitted": false
+    },
+    {
+      "name": "resume-jsx.bundle.js",
+      "size": 645,
+      "chunks": [
+        6
+      ],
+      "chunkNames": [
+        "resume-jsx"
+      ],
+      "info": {},
+      "emitted": false
+    },
+    {
+      "name": "vendors~contact-jsx.bundle.js",
+      "size": 15227,
+      "chunks": [
+        7
+      ],
+      "chunkNames": [
+        "vendors~contact-jsx"
+      ],
+      "info": {},
+      "emitted": false
+    },
+    {
+      "name": "vendors~contact-jsx.bundle.js.br",
+      "size": 4601,
+      "chunks": [],
+      "chunkNames": [],
+      "info": {},
+      "emitted": false
+    },
+    {
+      "name": "vendors~contact-jsx.bundle.js.gz",
+      "size": 5154,
+      "chunks": [],
+      "chunkNames": [],
+      "info": {},
+      "emitted": false
+    },
+    {
+      "name": "vendors~home-home-jsx.bundle.js",
+      "size": 15215,
+      "chunks": [
+        8
+      ],
+      "chunkNames": [
+        "vendors~home-home-jsx"
+      ],
+      "info": {},
+      "emitted": false
+    },
+    {
+      "name": "vendors~home-home-jsx.bundle.js.br",
+      "size": 5492,
+      "chunks": [],
+      "chunkNames": [],
+      "info": {},
+      "emitted": false
+    },
+    {
+      "name": "vendors~home-home-jsx.bundle.js.gz",
+      "size": 6091,
       "chunks": [],
       "chunkNames": [],
       "info": {},
@@ -54,7 +206,7 @@
   "entrypoints": {
     "main": {
       "chunks": [
-        0
+        3
       ],
       "assets": [
         "bundle.js"
@@ -66,10 +218,74 @@
   "namedChunkGroups": {
     "main": {
       "chunks": [
-        0
+        3
       ],
       "assets": [
         "bundle.js"
+      ],
+      "children": {},
+      "childAssets": {}
+    },
+    "navbar-navBar-jsx": {
+      "chunks": [
+        4
+      ],
+      "assets": [
+        "navbar-navBar-jsx.bundle.js"
+      ],
+      "children": {},
+      "childAssets": {}
+    },
+    "projects-projects-jsx": {
+      "chunks": [
+        5
+      ],
+      "assets": [
+        "projects-projects-jsx.bundle.js"
+      ],
+      "children": {},
+      "childAssets": {}
+    },
+    "resume-jsx": {
+      "chunks": [
+        6
+      ],
+      "assets": [
+        "resume-jsx.bundle.js"
+      ],
+      "children": {},
+      "childAssets": {}
+    },
+    "contact-jsx": {
+      "chunks": [
+        7,
+        0
+      ],
+      "assets": [
+        "vendors~contact-jsx.bundle.js",
+        "contact-jsx.bundle.js"
+      ],
+      "children": {},
+      "childAssets": {}
+    },
+    "home-home-jsx": {
+      "chunks": [
+        8,
+        2
+      ],
+      "assets": [
+        "vendors~home-home-jsx.bundle.js",
+        "home-home-jsx.bundle.js"
+      ],
+      "children": {},
+      "childAssets": {}
+    },
+    "footer-footer-jsx": {
+      "chunks": [
+        1
+      ],
+      "assets": [
+        "footer-footer-jsx.bundle.js"
       ],
       "children": {},
       "childAssets": {}
@@ -78,7 +294,7 @@
   "logging": {
     "webpack.buildChunkGraph.visitModules": {
       "entries": [],
-      "filteredEntries": 5,
+      "filteredEntries": 8,
       "debug": false
     }
   },
