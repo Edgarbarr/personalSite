@@ -4,7 +4,7 @@
     "configuration\nThe 'mode' option has not been set, webpack will fallback to 'production' for this value. Set 'mode' option to 'development' or 'production' to enable defaults for each environment.\nYou can also set it to 'none' to disable any default behavior. Learn more: https://webpack.js.org/configuration/mode/"
   ],
   "version": "4.44.0",
-  "hash": "50e0391719c02573ed0b",
+  "hash": "52ea78b230096fcf099b",
   "publicPath": "/assets/",
   "outputPath": "/Users/edgarbarrientos/personalSite/client/dist",
   "assetsByChunkName": {
@@ -83,7 +83,7 @@
     },
     {
       "name": "home-home-jsx.bundle.js",
-      "size": 15540,
+      "size": 15504,
       "chunks": [
         2
       ],
@@ -95,7 +95,7 @@
     },
     {
       "name": "home-home-jsx.bundle.js.br",
-      "size": 2914,
+      "size": 2893,
       "chunks": [],
       "chunkNames": [],
       "info": {},
@@ -103,7 +103,7 @@
     },
     {
       "name": "home-home-jsx.bundle.js.gz",
-      "size": 3473,
+      "size": 3447,
       "chunks": [],
       "chunkNames": [],
       "info": {},

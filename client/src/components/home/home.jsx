@@ -33,7 +33,6 @@ async function loadPolyfills() {
   }
   observer = new IntersectionObserver(callback, options);
   const elements = [...document.querySelectorAll('.crip div'), ...document.querySelectorAll('.qfi')];
-  console.log(elements, 'elements');
   elements.forEach((element) => { observer.observe(element); });
 }
 
