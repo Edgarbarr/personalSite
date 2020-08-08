@@ -62,7 +62,6 @@ const client = {
     }),
     new LoadablePlugin(),
     new webpack.IgnorePlugin(/^pg-native$/),
-
   ],
 
   devServer: {
